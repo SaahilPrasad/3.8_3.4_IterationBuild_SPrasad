@@ -94,11 +94,11 @@
 						<!-- Form for input fields -->
 						<form method = "post" id= "01_login">
 
-							<center><input style = "width: 20vw; height: 1.9vw; margin: 2vw 0vw 0vw 0vw; font-family: 'Russo One', sans-serif; color: #000;" type = "text" name = "username" placeholder="Username..."/></center>
+							<center><input style = "width: 20vw; height: 1.9vw; margin: 2vw 0vw 0vw 0vw; font-family: 'Roboto', sans-serif; color: #fff;" type = "text" name = "username" placeholder="Username..."/></center>
 
-							<center><input style = "width: 20vw; height: 1.9vw; margin: 3.07vw 0vw 0vw 0vw; font-family: 'Russo One', sans-serif; color: #000;" type = "password" name = "password" placeholder="Password..." id="myInput"/></center>
+							<center><input style = "width: 20vw; height: 1.9vw; margin: 3.07vw 0vw 0vw 0vw; font-family: 'Roboto', sans-serif; color: #fff;" type = "password" name = "password" placeholder="Password..." id="myInput"/></center>
 
-							<b><p style = "margin: 1.45vw 0vw -1.3vw 1.9vw; font-family: 'Russo One', sans-serif; font-size: 1vw; color: #000;">Show Password</p></b>
+							<b><p style = "margin: 1.45vw 0vw -1.3vw 1.9vw; font-family: 'Roboto', sans-serif; font-size: 1vw; color: #fff;">Show Password</p></b>
 
 							<!-- Checkbox for password visibility -->
 							<input type="checkbox" onclick="myFunction()"/>
@@ -107,13 +107,13 @@
 
 						</form>
 
-						<center><p style = "margin: 1.7vw 0vw 0vw 0vw; font-family: 'Russo One', sans-serif; font-size: 1vw; color: #000;">Need An Account?<a href = "register.php"> Register</a></p></center>
+						<center><p style = "margin: 1.7vw 0vw 0vw 0vw; font-family: 'Roboto', sans-serif; font-size: 1vw; color: #fff;">Need An Account?<a href = "register.php"> Register</a></p></center>
 					
 					</div>
 					
 					<!-- message class, which contains the error and success message output -->		
 					<div class = "message">
-						<center><p style = "color: #dc323e; margin: 0.7vw 0vw 0vw 0vw; font-family: Russo One, sans-serif; font-size: 1vw;"><?php echo $error; ?></p></center>
+						<center><p style = "color: #ff6161; margin: 0.7vw 0vw 0vw 0vw; font-family: 'Roboto', sans-serif; font-size: 1vw;"><?php echo $error; ?></p></center>
 					</div>
 					
 				</div>
