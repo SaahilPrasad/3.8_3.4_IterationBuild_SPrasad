@@ -59,19 +59,19 @@
 				<!-- navigation located at the very top -->		
 				<div class="nav" style="top: 0vw; position: sticky;">
 					<ul>
-						<li class ="hover-underline-animation" style="margin-left: 0vw; margin-right: 0vw;"><a href="query1.php">Query One</a></li>
-						<li class ="hover-underline-animation"><a href="query2.php">Query Two</a></li>
+						<li style="margin-left: 0vw; margin-right: 0vw;"><a href="query1.php">Query One</a></li>
+						<li><a href="query2.php">Query Two</a></li>
 						
 						<!-- Determines if the user is a standard user or admin (Graeme) and will output the navigation links with respect to this -->
 						<?php
 							if ($_SESSION['login_user'] == "Graeme" or $_SESSION['login_user'] == "graeme"){
-								echo "<li class ='hover-underline-animation'><a href='admin1.php'>Settings</a></li>";
+								echo "<li><a href='admin1.php'>Settings</a></li>";
 							}
 						?>
 						
 						<li style = "color: white;">|</li>
 						<li style = "color: white;"><?php echo $_SESSION['login_user'];?></li>
-						<li class ="hover-underline-animation" style = "margin-right: 0vw;"><a href="signout.php">Sign Out</a></li>
+						<li style = "margin-right: 0vw;"><a href="signout.php">Sign Out</a></li>
 					</ul>
 				</div>
 				
@@ -94,7 +94,7 @@
 			<div class = "search_content" style="position: sticky; top: 0vw;">
 				
 				<center><form action="search.php" method="post">
-					<input type="text" autocomplete="off" class="search" style = "background-color: #C2C2C2; font-family: 'Russo One', sans-serif;  font-size: 1vw;" placeholder="Search For Music..." name="search">
+					<input type="text" autocomplete="off" class="search" style = "font-family: 'Roboto', sans-serif; font-size: 1vw;" placeholder="Search For Music..." name="search">
 					<button class="button" type="submit">Search</button>
 				</form></center>
 			
@@ -118,7 +118,7 @@
 
 			<!-- total_duration which contains the total duration of all tracks/ songs -->
 			<div class = "total_duration" style="position: sticky; top: 6vw;">
-				<b><p style = "color: black; font-family: 'Russo One', sans-serif; font-size: 1.3vw; text-align: right; margin-top: 0vw;"><?php echo $output['Total Duration']; ?></b>
+				<b><p style = "color: white; font-family: 'Roboto', sans-serif; font-size: 1.3vw; text-align: right; margin-top: 0vw;"><?php echo $output['Total Duration']; ?></b>
 			</div>
 			
 			<?php }
@@ -128,7 +128,7 @@
 			<div class = "content_1">
 				
 				<!-- query_rows for query title -->
-				<div class="query_rows" style=" margin: 0vw 0vw 0vw 0vw; grid-column: 1 / span 2; grid-row: 1; display: grid; grid-template-columns: 1.5vw 0.14fr 0vw 0.13fr 1vw 0.47fr 1.3vw 0.37fr 1vw 0.6fr 1.4vw 0.3fr 1vw 0.25fr 1.3vw 0.17fr 1vw; border-bottom: 0.1vw solid #c2c2c2; background-color: #525252; position: sticky; top: 8vw;">
+				<div class="query_rows" style=" margin: 0vw 0vw 0vw 0vw; grid-column: 1 / span 2; grid-row: 1; display: grid; grid-template-columns: 1.5vw 0.14fr 0vw 0.13fr 1vw 0.47fr 1.3vw 0.37fr 1vw 0.6fr 1.4vw 0.3fr 1vw 0.25fr 1.3vw 0.17fr 1vw; border-bottom: 0.1vw solid #808080; background-color: #242424; position: sticky; top: 8vw;">
 
 					<div class = "cover" style = "grid-column: 2;">
 						<b><p style = "color: white; font-size: 1.2vw; margin: 0.8vw 0vw 0vw 0vw;">#</p></b>
@@ -191,7 +191,7 @@
 				?>
 				
 				<!-- query_rows for query output via SQL -->
-				<div class="query_rows" style="margin: 0vw 0vw 0vw 0vw; grid-column: 1 / span 2; grid-row: auto; display: grid; grid-template-columns: 1.5vw 0.14fr 0vw 0.13fr 1vw 0.47fr 1.3vw 0.37fr 1vw 0.6fr 1.4vw 0.3fr 1vw 0.25fr 1.3vw 0.17fr 1vw; border-bottom: 0.1vw solid #c2c2c2;">
+				<div class="query_rows" style="margin: 0vw 0vw 0vw 0vw; grid-column: 1 / span 2; grid-row: auto; display: grid; grid-template-columns: 1.5vw 0.14fr 0vw 0.13fr 1vw 0.47fr 1.3vw 0.37fr 1vw 0.6fr 1.4vw 0.3fr 1vw 0.25fr 1.3vw 0.17fr 1vw; border-bottom: 0.1vw solid #808080;">
 
 					<div class = "cover" style = "grid-column: 2;">
 						<b><p style = "font-size: 1.03vw; margin: 0vw 0vw 0vw 0vw; padding: 0.7vw 0vw 0vw 0vw;"><?php echo $output['Title_PK']; ?></b>
@@ -239,8 +239,8 @@
 			<!-- footer class to display legal message - sources and copyright statement -->
 			<div class = "footer">
 				<h3 style = "margin-top: 2.5vw; margin-left: 6vw;">Note</h3>
-				<p style = "font-family: 'Noto Sans', sans-serif; font-size: 1.1vw; color: #fff; margin-top: -3.5vw; margin-left: 6vw;">All Album Covers Have Been Sourced From Spotify.<br>Other Images Have Been Sourced From Creative Commons.</p>
-				<p style = "font-family: 'Noto Sans', sans-serif; font-size: 1.1vw; color: #fff; margin-top: -1.2vw; margin-left: 6vw;">&copy Copyright Saahil Prasad 2022, All Rights Reserved.</p>
+				<p style = "font-family: 'Poppins', sans-serif; font-size: 1.1vw; color: #fff; margin-top: -3.5vw; margin-left: 6vw;">All Album Covers Have Been Sourced From Spotify.<br>Other Images Have Been Sourced From Creative Commons.</p>
+				<p style = "font-family: 'Poppins', sans-serif; font-size: 1.1vw; color: #fff; margin-top: -1.2vw; margin-left: 6vw;">&copy Copyright Saahil Prasad 2022, All Rights Reserved.</p>
 			</div>
 		</div>
 							
