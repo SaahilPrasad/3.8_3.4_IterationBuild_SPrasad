@@ -63,11 +63,11 @@
 						<!-- Form for input fields -->
 						<form method = "post" id= "01_login">
 
-							<center><input style = "width: 20vw; height: 1.9vw; margin: 2vw 0vw 0vw 0vw; font-family: 'Russo One', sans-serif; color: #000;" type = "text" name = "username" placeholder="Username..."/></center>
+							<center><input style = "width: 20vw; height: 1.9vw; margin: 2vw 0vw 0vw 0vw; font-family: 'Roboto', sans-serif; color: #fff;" type = "text" name = "username" placeholder="Username..."/></center>
 
-							<center><input style = "width: 20vw; height: 1.9vw; margin: 3.07vw 0vw 0vw 0vw; font-family: 'Russo One', sans-serif; color: #000;" type = "password" name = "password" placeholder="Password..." id="myInput"/></center>
+							<center><input style = "width: 20vw; height: 1.9vw; margin: 3.07vw 0vw 0vw 0vw; font-family: 'Roboto', sans-serif; color: #fff;" type = "password" name = "password" placeholder="Password..." id="myInput"/></center>
 
-							<b><p style = "margin: 1.45vw 0vw -1.3vw 1.9vw; font-family: 'Russo One', sans-serif; font-size: 1vw; color: #000;">Show Password</p></b>
+							<b><p style = "margin: 1.45vw 0vw -1.3vw 1.9vw; font-family: 'Roboto', sans-serif; font-size: 1vw; color: #fff;">Show Password</p></b>
 
 							<!-- Checkbox for password visibility -->
 							<input type="checkbox" onclick="myFunction()"/>
@@ -76,7 +76,7 @@
 
 						</form>
 
-						<center><p style = "margin: 1.7vw 0vw 0vw 0vw; font-size: 1vw; font-family: 'Russo One', sans-serif; font-size: 1vw; color: #000;">Return Back To<a href = "login.php"> Login</a></p></center>
+						<center><p style = "margin: 1.7vw 0vw 0vw 0vw; font-size: 1vw; font-family: 'Roboto', sans-serif; font-size: 1vw; color: #fff;">Return Back To<a href = "login.php"> Login</a></p></center>
 					
 					</div>
 					
@@ -96,10 +96,10 @@
 
 								if (mysqli_query($conn,$insertquery))
 									{
-									echo "<center><p style = 'color: #1eae6b; margin: 0.7vw 0vw 0vw 0vw; font-family: Russo One, sans-serif; font-size: 1vw;'>User Successfully Registered</p></center>";
+									echo "<center><p style = 'color: #66bd76; margin: 0.7vw 0vw 0vw 0vw; font-family: Roboto, sans-serif; font-size: 1vw;'>User Successfully Registered</p></center>";
 									}
 								else{
-									echo "<center><p style = 'color: #dc323e; margin: 0.7vw 0vw 0vw 0vw; font-family: Russo One, sans-serif; font-size: 1vw;'>Invalid Credentials, Please Try Again</p></center>";
+									echo "<center><p style = 'color: #ff6161; margin: 0.7vw 0vw 0vw 0vw; font-family: Roboto, sans-serif; font-size: 1vw;'>Invalid Credentials, Please Try Again</p></center>";
 									}
 							}
 
