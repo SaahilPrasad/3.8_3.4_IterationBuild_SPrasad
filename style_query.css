@@ -1,69 +1,274 @@
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
 /* Style for overall website */
 html{
-  background: white;
+	background: #121416;
+	scroll-behavior: smooth;
 }
 
 /* Style for body */
 body {
-  margin: 0vw;
+	margin: 0vw;
 }
 
 /* Grid system has been created below */
 .grid-container {
 	display: grid;
-	grid-template-columns: 18vw auto;
-	grid-template-rows: 29vw 7vw 3vw 50vw 0vw 13vw;
+	grid-template-columns: auto;
+	grid-template-rows: 25vw 6vw 2vw auto 6.2vw 14.5vw;
 }
 
-/* Style for nav (navigation) */
-.nav1 {
-	background: #000;
-	opacity: ;
-	font-size: 1.35vw;
-	grid-column: 1;
-	grid-row: 1 / span 6;
-	z-index: 1;
+/* Style for loading screen */
+.loading_screen{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	z-index: 500;
+	align-items: center;
+	justify-content: center;
+	background: #121416;
+	transition: all 0.5s;
+}
+
+/* Style for Zeta logo animation on load */
+.zoom-in-out-box {
+	align-items: center;
+	justify-content: center;
+	background: #121416;
+	animation: zoom-in-zoom-out 1s ease infinite;
+}
+
+@keyframes zoom-in-zoom-out {
+	0% {
+		transform: scale(1, 1);
+	}
+	50% {
+		transform: scale(1.5, 1.5);
+	}
+	100% {
+		transform: scale(1, 1);
+	}
+}
+
+/* Style for fonts */
+h3 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 2.5vw;
+	color: #3d99b8;
 }
 
 /* Style for header, which contains the grid system for the navigation bar */
 .header {
-	background-color: lightblue;
-	grid-column: 2;
+	background-color: #242424;
+	grid-column: 1 / span 2;
 	grid-row: 1;
 	display: grid;
+	grid-template-columns: 17vw auto;
+	grid-template-rows: 4.25vw auto;
+}
+
+/* Style for header text */
+.headertext {
+	background-color: transparent;
+	color: #fff;
+	font-family: 'Roboto', sans-serif; 
+	font-size: 4vw;
+	padding: 1vw 0vw 0vw 6vw;
+	grid-column: 1 / span 2;
+	grid-row: 2;
+	width: 55vw;
+}
+
+/* Style for logo box/ logo */
+.logo {
+	box-sizing: border-box;
+	background: #121416;
+	opacity: ;
+	grid-column: 1;
+	grid-row: 1;
+	z-index: 1;
+	display: grid;
+	grid-template-columns: 17vw;
+	grid-template-rows: 4.25vw;
+}
+
+/* Style for logo box/ logo */
+.logo2 {
+	box-sizing: border-box;
+	text-align: center;
+	background: #121416;
+	opacity: ;
+	grid-column: 1;
+	grid-row: 1;
+	z-index: 99;
+}
+
+.logo2 ul {
+	display: inline;
+	margin: 0vw 0vw 0vw 0vw;
+	list-style: none;
+}
+
+.logo2 ul li {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.2vw;
+	position: absolute;
+	margin: 1.5vw 1.1vw 1vw 3.2vw;
+	transition: 0.5s;
+}
+
+/* Style for navigation */
+.nav {
+	box-sizing: border-box;
+	background: #121416;
+	opacity: ;
+	grid-column: 2 / span 2;
+	grid-row: 1;
+	z-index: 1;
+}
+
+.nav ul {
+	display: inline;
+	margin: 0vw 0vw 0vw 5vw;
+	list-style: none;
+	float: right;
+	margin-right: 6.8vw;
+}
+
+.nav ul li {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.2vw;
+	font-weight: bold;
+	display: inline-block;
+	position: relative;
+	margin-right: 0vw;
+	padding: 1.5vw 1.1vw 1vw 1.1vw;
+	transition: 0.5s;
+}
+
+ul li:hover {
+	transform: scale(1.1, 1.1);
+	transition: 0.5s;
+}
+
+a:link{color:#FFFFFF;}
+a:visited{color:#FFFFFF;}
+a:hover{color:#FFFFFF;}
+a:active{color:#FFFFFF;}
+
+a {
+	text-decoration: none;
+}
+
+/* Style for navigation underline effect */
+.hover-underline-animation {
+	display: inline-block;
+	position: relative;
+	color: #fff;
+}
+
+.hover-underline-animation:after {
+	content: '';
+	position: absolute;
+	width: 74.5%;
+	transform: scaleX(0);
+	height: 0.11vw;
+	bottom: 0.8vw;
+	left: 1vw;
+	background-color: #fff;
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
 }
 
 /* Style for search_content - search system */
 .search_content{
-	background: #ffb282;
+	background: #121416;
 	opacity: ;
-	font-size: 1.1vw;
-	margin: 0vw 5vw 0vw 5vw;
-	grid-column: 2;
+	margin: 0vw 6.2vw 0vw 6.2vw;
+	grid-column: 1 / span 2;
 	grid-row: 2;
 	display: grid;
 	z-index: 1;
 }
 
+/* Style for text input */
+input[type=text] {
+	width: 45vw;
+	height: 2.35vw;
+	margin: 2.5vw 0vw 0vw 0vw;
+  	border: none;
+	font-size: 1.1vw;
+	padding-left: 0.8vw;
+	padding-right: 0.8vw;
+	padding-top: 0.15vw;
+}
+
+/* Style for submit button */
+.button {
+	height: 2.6vw;
+	width: 7vw;
+	background-color: #3d99b8;
+  	border: none;
+	outline: none;
+	font-size: 1.1vw;
+	color: #fff;
+	padding-left: 0.8vw;
+	padding-right: 0.8vw;
+	padding-top: 0.8vw;
+}
+
+.button:hover {
+	background-color: #66bd76;
+	transition: 0.23s ease-in-out;
+	cursor: pointer;
+}
+
 /* Style for total_duration */
 .total_duration{
-	background: #ccb0f7;
+	background: #121416;
 	opacity: ;
-	font-size: 1.1vw;
-	margin: 0vw 5vw 0vw 5vw;
-	grid-column: 2;
+	margin: 0vw 6.2vw 0vw 6.2vw;
+	grid-column: 1 / span 2;
 	grid-row: 3;
+	z-index: 1;
 	display: grid;
+	grid-template-columns: auto 2.3vw 6vw;
+	grid-template-rows: 2vw;
+}
+
+.clock{
+	background: #121416;
+	opacity: ;
+	grid-column: 2;
+	grid-row: 1;
+	z-index: 1;
+}
+
+.durationtxt{
+	background: #121416;
+	opacity: ;
+	grid-column: 3;
+	grid-row: 1;
 	z-index: 1;
 }
 
 /* Style for content_1, which contains the grid system for the query row heading */
 .content_1 {
-	background: white;
+	background: #121416;
+	font-family: 'Roboto', sans-serif; 
+	color: #fff;
 	opacity: ;
 	font-size: 1.1vw;
-	margin: 0vw 0vw 0vw 0vw;
-	grid-column: 2;
+	margin: 0vw 6.2vw 0vw 6.2vw;
+	grid-column: 1 / span 2;
 	grid-row: 4;
 	display: grid;
 	grid-template-columns: auto;
@@ -71,13 +276,18 @@ body {
 	position: relative;
 }
 
+.query_rows:hover {
+	background-color: #242424;
+	/*cursor: pointer;*/
+}
+
 /* Style for space_1, which creates space between contents */
 .space_1{
-	background: black;
+	background: #121416;
 	opacity: ;
 	font-size: 1.1vw;
 	margin: 0vw 0vw 0vw 0vw;
-	grid-column: 2;
+	grid-column: 1 / span 2;
 	grid-row: 5;
 	display: grid;
 	z-index: 1;
@@ -85,12 +295,17 @@ body {
 
 /* Style for footer for legal statements */
 .footer{
-	background: #beedab;
+	background: #242424;
 	opacity: ;
-	font-size: 1.1vw;
-	margin: 0vw 0vw 0vw 0vw;
-	grid-column: 2;
+	grid-column: 1 / span 2;
 	grid-row: 6;
 	display: grid;
 	z-index: 1;
+}
+
+/* Style for back to top button */
+#back_to_top_btn1:hover img{
+	transform: scale(1.1, 1.1); 
+	transition: 0.5s;
+	cursor: pointer;
 }
