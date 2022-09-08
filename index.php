@@ -1,3 +1,14 @@
+<!-- Session - ensures that user is logged in to grant access to page -->
+<?php
+	session_start();
+    if(!isset($_SESSION['login_user'])){
+		header("location:login.php");
+	}
+	else{
+		$User = $_SESSION['login_user'];
+	}
+?>
+
 <!-- HTML starts here -->
 <!DOCTYPE html>
 
@@ -19,97 +30,166 @@
 		
 		<!-- Link to style sheet -->
 		<link rel="stylesheet" href="css/style_index.css"/>
+		
+		<!-- Link to javascript files -->
+		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="js/back_to_top.js"></script>
 	</head>
 	
 	<body>
 	
 		<!-- grid-container class which contains all content using CSS grid -->
 		<div class="grid-container">
-		
-			<div class="nav1">
-				<b><p style = "color: white; font-size: 2vw; margin: 1vw 0vw 0vw 1vw;">Navigation</p></b>
+			
+			<!-- header class which consists of the header image, text logo and navigation system -->
+			<div class="header" style="background-image: url('images/headerbg1.jpg'); background-size: 100vw 55vw;">
+				
+				<?php
+				if(session_id() == ''){session_start();}
+				if(isset($_SESSION['login_user'])){
+				?>
+				
+				<!-- Logo box -->
+				<div class="logo" style="top: 0vw; position: sticky;">
+					<ul>
+						<li style="margin-left: 7.5vw; position: absolute; padding-left: 0vw; margin-right: 0vw;"><a href="index.php">LOGO</a></li>
+					</ul>
+				</div>
+				
+				<!-- navigation located at the very top -->
+				<div class="nav" style="top: 0vw; position: sticky;">
+					<ul>
+						<li class ="hover-underline-animation" style="margin-left: 0vw; margin-right: 0vw;"><a href="query1.php">Query One</a></li>
+						<li class ="hover-underline-animation"><a href="query2.php">Query Two</a></li>
+
+						<!-- Determines if the user is a stanclass ="hover-underline-animation"dard user or admin (Graeme) and will output the navigation links with respect to this -->
+						<?php
+							if ($_SESSION['login_user'] == "Graeme" or $_SESSION['login_user'] == "graeme"){
+								echo "<li class ='hover-underline-animation'><a href='admin1.php'>Settings</a></li>";
+							}
+						?>
+						
+						<li style = "color: white;">|</li>
+						<li style = "color: white;"><?php echo $_SESSION['login_user'];?></li>
+						<li class ="hover-underline-animation" style = "margin-right: 0vw;"><a href="signout.php">Sign Out</a></li>
+					</ul>
+				</div>
+				
+				<!-- Text displayed in header -->
+				<div class = "headertext">
+					<h1 style = "padding: 7.95vw 0vw 0vw 6vw;">Elevate Your Listening Experience...</h1>
+				</div>
+				
+				<div class = "headertext2">
+					<a href="index.php#search_content"><h2>Browse Now</h2></a>
+				</div>
+				
 			</div>
 			
-			<!-- header class which consists of the header image, text -->
-			<div class="header" style="background-image: url('images/header2.jpg'); background-size: 100vw 55vw;">
-				<b><p style = "color: black; font-size: 2vw; margin: 1vw 0vw 0vw 1vw;">Header</p></b>
+			<?php } else {
+			?>
+			
+			<?php }
+			?>
+			
+			<!-- search_content which contains the search system -->
+			<div id="search_content">
+				
+				<center><form action="search.php" method="post">
+					<input type="text" autocomplete="off" class="search" style = "border: 0.25vw solid #C2C2C2; background-color: #C2C2C2; font-family: 'Russo One', sans-serif;" placeholder="Search For Music..." name="search">
+					<button class="button" type="submit">Search</button>
+				</form></center>
+			
 			</div>
 			
-			<!-- Creates space between contents via CSS grid -->			
+			<div class = "line">
+			</div>
+			
+			<!-- Creates space between contents via CSS grid -->
 			<div class="space_1">
 			</div>
 			
-			<!-- content_1 to hold the genre, song and artist covers' classes -->
+			<!-- content_1 to hold the genre and playlist image classes -->
 			<div class = "content_1">
 				
-				<!-- content_genre class to hold all genre covers/ images -->
+				<!-- content_genre class to hold genre text and all genre covers/ images -->
 				<div class = "content_genre">
+					
+					<div class = "genretext">
+						<h3 style = "margin-top: 0vw;">Genres</h3>
+						<p style = "margin-top: -2.3vw;">Explore Some Of Our Popular Genres!</p>
+					</div>
 				
 					<div class = "genre1">
-						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Genre 1</p></b>
+						<b><p>Genre 1</p></b>
 					</div>
 					
 					<div class = "genre2">
-						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Genre 2</p></b>
+						<b><p>Genre 2</p></b>
 					</div>
 					
 					<div class = "genre3">
-						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Genre 3</p></b>
+						<b><p>Genre 3</p></b>
 					</div>
 					
 					<div class = "genre4">
-						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Genre 4</p></b>
+						<b><p>Genre 4</p></b>
 					</div>
 
 				</div>
 				
-				<!-- content_song class to hold all song covers/ images -->
-				<div class = "content_song">
-				
-					<div class = "song1" style = "margin: 0vw 0vw 0vw 0vw;">
-						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Song 1</p></b>
-					</div>
+				<!-- content_playlist class to hold playlist text and all playlist images -->
+				<div class = "content_playlist">
 					
-					<div class = "song2">
-						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Song 2</p></b>
-					</div>
-					
-					<div class = "song3">
-						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Song 3</p></b>
-					</div>
-					
-					<div class = "song4">
-						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Song 4</p></b>
+					<div class = "playlisttext">
+						<h3 style = "margin-top: 0vw;">Playlists</h3>
+						<p style = "margin-top: -2.3vw;">Suggested Playlists For You To Delve Into!</p>
 					</div>
 				
-				</div>
-				
-				<!-- content_artist class to hold all artist covers/ images -->
-				<div class = "content_artist">
-				
-					<div class = "artist1" style = "margin: 0vw 0vw 0vw 0vw;">
-						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Artist 1</p></b>
+					<div class = "playlist1">
+						<b><p>Song 1</p></b>
 					</div>
 					
-					<div class = "artist2">
-						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Artist 2</p></b>
+					<div class = "playlist2">
+						<b><p>Song 2</p></b>
 					</div>
 					
-					<div class = "artist3">
-						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Artist 3</p></b>
+					<div class = "playlist3">
+						<b><p>Song 3</p></b>
 					</div>
 					
-					<div class = "artist4">
-						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Artist 4</p></b>
+					<div class = "playlist4">
+						<b><p>Song 4</p></b>
 					</div>
-				
+
 				</div>
 			
 			</div>
 			
+			<!-- promotion_header class to promote/ advertise Graeme's two playlists (Query One, Query Two) MAKE GRID SYSTEM FOR THIS-->
+			<div class = "promotion_header">
+				<div class = "promotiontext1">
+					<h2 style = "font-size: 3.7vw; padding: 2vw 0vw 0vw 6vw;">Check Out Graeme's<br>Playlists!</h2>
+				</div>
+				
+				<div class = "promotiontext2">
+					<a href="query1.php"><h3 style = "font-size: 2.1vw; margin-top: 0vw; color: #fff;">Party All Day</h3></a>
+				</div>
+				
+				<div class = "promotiontext3">
+					<center><h3 style = "font-size: 2.1vw; margin-top: 0vw; color: #fff;">|</h3></center>
+				</div>
+				
+				<div class = "promotiontext4">
+					<a href="query2.php"><h3 style = "font-size: 2.1vw; margin-top: 0vw; color: #fff;">Party All Night</h3></a>
+				</div>
+			</div>
+			
 			<!-- footer class to display legal message - sources and copyright statement -->
 			<div class = "footer">
-				<b><p style = "color: black; font-size: 2vw; margin: 1vw 0vw 0vw 1vw;">Footer</p></b>
+				<h3 style = "margin-top: 2.5vw; margin-left: 6vw;">Note</h3>
+				<p style = "font-size: 1.1vw; color: #fff; margin-top: -3.5vw; margin-left: 6vw;">All Album Covers Have Been Sourced From Spotify.<br>Other Images Have Been Sourced From Creative Commons.</p>
+				<p style = "font-size: 1.1vw; color: #fff; margin-top: -1.2vw; margin-left: 6vw;">&copy Copyright Saahil Prasad 2022, All Rights Reserved.</p>
 			</div>
 			
 		</div>
