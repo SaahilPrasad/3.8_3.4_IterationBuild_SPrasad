@@ -39,6 +39,16 @@
 			</div>
 			
 			<!-- Creates space between contents via CSS grid -->			
+			<div class="search_content">
+				<center><form>
+				
+					<input type="text" autocomplete="off" class="search" placeholder="Search For Music..." name="search">
+					
+					<button class="button" type="submit">Search</button>
+				
+				</form></center>
+			</div>
+			
 			<div class="space_1">
 			</div>
 			
@@ -63,10 +73,6 @@
 					<div class = "genre4">
 						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Genre 4</p></b>
 					</div>
-					
-					<div class = "genre5">
-						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Genre 5</p></b>
-					</div>
 
 				</div>
 				
@@ -88,36 +94,7 @@
 					<div class = "song4">
 						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Song 4</p></b>
 					</div>
-					
-					<div class = "song5">
-						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Song 5</p></b>
-					</div>
-				
-				</div>
-				
-				<!-- content_artist class to hold all artist covers/ images -->
-				<div class = "content_artist">
-				
-					<div class = "artist1" style = "margin: 0vw 0vw 0vw 0vw;">
-						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Artist 1</p></b>
-					</div>
-					
-					<div class = "artist2">
-						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Artist 2</p></b>
-					</div>
-					
-					<div class = "artist3">
-						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Artist 3</p></b>
-					</div>
-					
-					<div class = "artist4">
-						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Artist 4</p></b>
-					</div>
-					
-					<div class = "artist5">
-						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Artist 5</p></b>
-					</div>
-				
+
 				</div>
 			
 			</div>
