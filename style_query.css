@@ -1,10 +1,10 @@
 /* Font Imports */
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 /* Style for overall website */
 html{
-  background: #fff;
+  background: #121416;
 }
 
 /* Style for body */
@@ -21,9 +21,9 @@ body {
 
 /* Style for fonts */
 h3 {
-	font-family: 'Russo One', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 2.5vw;
-	color: #367ABF
+	color: #3d99b8;
 }
 
 /* Style for header, which contains the grid system for the navigation bar */
@@ -40,7 +40,7 @@ h3 {
 .headertext {
 	background-color: transparent;
 	color: #fff;
-	font-family: 'Russo One', sans-serif;
+	font-family: 'Roboto', sans-serif; 
 	font-size: 4vw;
 	padding: 1vw 0vw 0vw 6vw;
 	grid-column: 1 / span 2;
@@ -51,7 +51,7 @@ h3 {
 /* Style for logo box/ logo */
 .logo {
 	box-sizing: border-box;
-	background: #000;
+	background: #121416;
 	opacity: ;
 	grid-column: 1;
 	grid-row: 1;
@@ -65,7 +65,7 @@ h3 {
 }
 
 .logo ul li {
-	font-family: 'Russo One', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 1.2vw;
 	font-weight: bold;
 	position: relative;
@@ -77,7 +77,7 @@ h3 {
 /* Style for navigation */
 .nav {
 	box-sizing: border-box;
-	background: #000;
+	background: #121416;
 	opacity: ;
 	grid-column: 2 / span 2;
 	grid-row: 1;
@@ -93,7 +93,7 @@ h3 {
 }
 
 .nav ul li {
-	font-family: 'Russo One', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 1.2vw;
 	font-weight: bold;
 	display: inline-block;
@@ -106,6 +106,7 @@ h3 {
 ul li:hover {
 	transform: scale(1.1, 1.1);
 	transition: 0.5s;
+	text-decoration: underline;
 }
 
 a:link{color:#FFFFFF;}
@@ -117,34 +118,9 @@ a {
 	text-decoration: none;
 }
 
-/* Style for navigation underline effect */
-.hover-underline-animation {
-  display: inline-block;
-  position: relative;
-  color: #fff;
-}
-
-.hover-underline-animation:after {
-  content: '';
-  position: absolute;
-  width: 75%;
-  transform: scaleX(0);
-  height: 0.12vw;
-  bottom: 0.8vw;
-  left: 1vw;
-  background-color: #fff;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.hover-underline-animation:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
 /* Style for search_content - search system */
 .search_content{
-	background: #fff;
+	background: #121416;
 	opacity: ;
 	margin: 0vw 6.2vw 0vw 6.2vw;
 	grid-column: 1 / span 2;
@@ -169,7 +145,7 @@ input[type=text] {
 .button {
 	height: 2.6vw;
 	width: 7vw;
-	background-color: #367ABF;
+	background-color: #3d99b8;
   	border: none;
 	outline: none;
 	font-size: 1.1vw;
@@ -180,14 +156,14 @@ input[type=text] {
 }
 
 .button:hover {
-	background-color: #1eae6b;
+	background-color: #66bd76;
 	transition: 0.23s ease-in-out;
 	cursor: pointer;
 }
 
 /* Style for total_duration */
 .total_duration{
-	background: #fff;
+	background: #121416;
 	opacity: ;
 	margin: 0vw 6.2vw 0vw 6.2vw;
 	grid-column: 1 / span 2;
@@ -198,9 +174,9 @@ input[type=text] {
 
 /* Style for content_1, which contains the grid system for the query row heading */
 .content_1 {
-	background: #fff;
-	font-family: 'Russo One', sans-serif;
-	color: #000;
+	background: #121416;
+	font-family: 'Roboto', sans-serif; 
+	color: #fff;
 	opacity: ;
 	font-size: 1.1vw;
 	margin: 0vw 6.2vw 0vw 6.2vw;
@@ -213,13 +189,13 @@ input[type=text] {
 }
 
 .query_rows:hover {
-	background-color: #c2c2c2;
+	background-color: #242424;
 	/*cursor: pointer;*/
 }
 
 /* Style for space_1, which creates space between contents */
 .space_1{
-	background: #fff;
+	background: #121416;
 	opacity: ;
 	font-size: 1.1vw;
 	margin: 0vw 0vw 0vw 0vw;
@@ -231,7 +207,7 @@ input[type=text] {
 
 /* Style for footer for legal statements */
 .footer{
-	background: #525252;
+	background: #242424;
 	opacity: ;
 	grid-column: 1 / span 2;
 	grid-row: 6;

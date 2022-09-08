@@ -42,7 +42,7 @@
 		<div class="grid-container">
 			
 			<!-- header class which consists of the header image, text logo and navigation system -->
-			<div class="header" style="background-image: url('images/headerbg1.jpg'); background-size: 100vw 55vw;">
+			<div class="header" style="background-image: url('images/header2.jpg'); background-size: 100vw 55vw;">
 				
 				<?php
 				if(session_id() == ''){session_start();}
@@ -59,19 +59,19 @@
 				<!-- navigation located at the very top -->
 				<div class="nav" style="top: 0vw; position: sticky;">
 					<ul>
-						<li class ="hover-underline-animation" style="margin-left: 0vw; margin-right: 0vw;"><a href="query1.php">Query One</a></li>
-						<li class ="hover-underline-animation"><a href="query2.php">Query Two</a></li>
+						<li style="margin-left: 0vw; margin-right: 0vw;"><a href="query1.php">Query One</a></li>
+						<li><a href="query2.php">Query Two</a></li>
 
-						<!-- Determines if the user is a stanclass ="hover-underline-animation"dard user or admin (Graeme) and will output the navigation links with respect to this -->
+						<!-- Determines if the user is a standard user or admin (Graeme) and will output the navigation links with respect to this -->
 						<?php
 							if ($_SESSION['login_user'] == "Graeme" or $_SESSION['login_user'] == "graeme"){
-								echo "<li class ='hover-underline-animation'><a href='admin1.php'>Settings</a></li>";
+								echo "<li><a href='admin1.php'>Settings</a></li>";
 							}
 						?>
 						
 						<li style = "color: white;">|</li>
 						<li style = "color: white;"><?php echo $_SESSION['login_user'];?></li>
-						<li class ="hover-underline-animation" style = "margin-right: 0vw;"><a href="signout.php">Sign Out</a></li>
+						<li style = "margin-right: 0vw;"><a href="signout.php">Sign Out</a></li>
 					</ul>
 				</div>
 				
@@ -96,7 +96,7 @@
 			<div id="search_content">
 				
 				<center><form action="search.php" method="post">
-					<input type="text" autocomplete="off" class="search" style = "border: 0.25vw solid #C2C2C2; background-color: #C2C2C2; font-family: 'Russo One', sans-serif;" placeholder="Search For Music..." name="search">
+					<input type="text" autocomplete="off" class="search" style = "border: 0.25vw solid #fff; font-family: 'Roboto', sans-serif;" placeholder="Search For Music..." name="search">
 					<button class="button" type="submit">Search</button>
 				</form></center>
 			
@@ -173,23 +173,23 @@
 				</div>
 				
 				<div class = "promotiontext2">
-					<a href="query1.php"><h3 style = "font-size: 2.1vw; margin-top: 0vw; color: #fff;">Party All Day</h3></a>
+					<a href="query1.php"><h3 style = "margin-top: 0vw; color: #fff;">Party All Day</h3></a>
 				</div>
 				
 				<div class = "promotiontext3">
-					<center><h3 style = "font-size: 2.1vw; margin-top: 0vw; color: #fff;">|</h3></center>
+					<center><h3 style = "margin-top: 0vw; color: #fff;">|</h3></center>
 				</div>
 				
 				<div class = "promotiontext4">
-					<a href="query2.php"><h3 style = "font-size: 2.1vw; margin-top: 0vw; color: #fff;">Party All Night</h3></a>
+					<a href="query2.php"><h3 style = "margin-top: 0vw; color: #fff;">Party All Night</h3></a>
 				</div>
 			</div>
 			
 			<!-- footer class to display legal message - sources and copyright statement -->
 			<div class = "footer">
 				<h3 style = "margin-top: 2.5vw; margin-left: 6vw;">Note</h3>
-				<p style = "font-size: 1.1vw; color: #fff; margin-top: -3.5vw; margin-left: 6vw;">All Album Covers Have Been Sourced From Spotify.<br>Other Images Have Been Sourced From Creative Commons.</p>
-				<p style = "font-size: 1.1vw; color: #fff; margin-top: -1.2vw; margin-left: 6vw;">&copy Copyright Saahil Prasad 2022, All Rights Reserved.</p>
+				<p style = "font-size: 1.1vw; margin-top: -3.5vw; margin-left: 6vw;">All Album Covers Have Been Sourced From Spotify.<br>Other Images Have Been Sourced From Creative Commons.</p>
+				<p style = "font-size: 1.1vw; margin-top: -1.2vw; margin-left: 6vw;">&copy Copyright Saahil Prasad 2022, All Rights Reserved.</p>
 			</div>
 			
 		</div>

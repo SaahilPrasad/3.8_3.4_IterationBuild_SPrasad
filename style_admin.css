@@ -1,10 +1,10 @@
 /* Font Imports */
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 /* Style for overall website */
 html{
-  background: #fff;
+  background: #121416;
 }
 
 /* Style for body */
@@ -24,21 +24,21 @@ body {
 
 /* Style for fonts */
 h1 {
-	font-family: 'Russo One', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 4.3vw;
 	color: #fff;
 }
 
 h3 {
-	font-family: 'Russo One', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 2.5vw;
-	color: #000;
+	color: #fff;
 }
 
 /* Style for navigation */
 .nav {
 	box-sizing: border-box;
-	background: #000;
+	background: #121416;
 	opacity: ;
 	grid-column: 1 / span 2;
 	grid-row: 1;
@@ -51,7 +51,7 @@ h3 {
 /* Style for logo box/ logo */
 .logo {
 	box-sizing: border-box;
-	background: #000;
+	background: #121416;
 	opacity: ;
 	grid-column: 1;
 	grid-row: 1;
@@ -65,7 +65,7 @@ h3 {
 }
 
 .logo ul li {
-	font-family: 'Russo One', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 1.2vw;
 	position: relative;
 	margin-right: 0vw;
@@ -76,7 +76,7 @@ h3 {
 /* Style for navigation 2 */
 .nav2 {
 	box-sizing: border-box;
-	background: #000;
+	background: #121416;
 	opacity: ;
 	grid-column: 2 / span 2;
 	grid-row: 1;
@@ -92,7 +92,7 @@ h3 {
 }
 
 .nav2 ul li {
-	font-family: 'Russo One', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 1.2vw;
 	display: inline-block;
 	position: relative;
@@ -102,9 +102,9 @@ h3 {
 }
 
 ul li:hover {
-	/*text-decoration: underline;*/
 	transform: scale(1.1, 1.1);
 	transition: 0.5s;
+	text-decoration: underline;
 }
 
 a:link{color:#FFFFFF;}
@@ -114,31 +114,6 @@ a:active{color:#FFFFFF;}
 
 a {
 	text-decoration: none;
-}
-
-/* Style for navigation underline effect */
-.hover-underline-animation {
-  display: inline-block;
-  position: relative;
-  color: #fff;
-}
-
-.hover-underline-animation:after {
-  content: '';
-  position: absolute;
-  width: 75%;
-  transform: scaleX(0);
-  height: 0.12vw;
-  bottom: 0.8vw;
-  left: 1vw;
-  background-color: #fff;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.hover-underline-animation:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
 }
 
 /* Style for content_1, which contains the grid system for the login box and header */
@@ -157,7 +132,7 @@ a {
 
 /* Style for login box */
 .login_box {
-	background: #fff;
+	background: #121416;
 	box-sizing: border-box;
 	position: relative;
 	grid-column: 1;
@@ -193,7 +168,7 @@ input[type=text] {
 	padding-right: 0.4vw;
 	background: transparent;
 	border: none;
-  	border-bottom: 0.25vw solid #c2c2c2;
+  	border-bottom: 0.25vw solid #808080;
 	outline: none;
 	font-size: 1.2vw;
 }
@@ -204,7 +179,7 @@ input[type=password] {
 	padding-right: 0.4vw;
 	background: transparent;
 	border: none;
-  	border-bottom: 0.25vw solid #c2c2c2;
+  	border-bottom: 0.25vw solid #808080;
 	outline: none;
 	font-size: 1.2vw;
 }
@@ -213,14 +188,14 @@ input[type=password] {
 input[type=submit] {
 	border: none;
 	outline: none;
-	font-family: 'Russo One', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 1.3vw;
-	background-color: #367ABF;
+	background-color: #3d99b8;
 	color: #fff;
 }
 
 input[type=submit]:hover {
-	background-color: #1eae6b;
+	background-color: #66bd76;
 	transition: 0.23s ease-in-out;
 	cursor: pointer;
 }
@@ -298,7 +273,7 @@ a {
 
 /* Style for content_2 */
 .content_2 {
-	font-family: 'Russo One', sans-serif;
+	font-family: 'Roboto', sans-serif; 
 	color: #fff;
 	overflow-y: auto;
 	margin: 22.7vw 14vw 0vw 6.5vw;
@@ -312,7 +287,7 @@ a {
 }
 
 .query_rows:hover {
-	background-color: #c2c2c2;
+	background-color: #242424;
 	/*cursor: pointer;*/
 }
 
