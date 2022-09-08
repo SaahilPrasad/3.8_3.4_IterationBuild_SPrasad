@@ -59,19 +59,19 @@
 				<!-- nav 2 containing the navigation links -->
 				<div class="nav2" style="top: 0vw; position: sticky;">
 					<ul>
-						<li class ="hover-underline-animation" style="margin-left: 0vw; margin-right: 0vw;"><a href="query1.php">Query One</a></li>
-						<li class ="hover-underline-animation"><a href="query2.php">Query Two</a></li>
+						<li style="margin-left: 0vw; margin-right: 0vw;"><a href="query1.php">Query One</a></li>
+						<li><a href="query2.php">Query Two</a></li>
 
 						<!-- Determines if the user is a standard user or admin (Graeme) and will output the navigation links with respect to this -->
 						<?php
 							if ($_SESSION['login_user'] == "Graeme" or $_SESSION['login_user'] == "graeme"){
-								echo "<li class ='hover-underline-animation'><a href='admin1.php'>Settings</a></li>";
+								echo "<li><a href='admin1.php'>Settings</a></li>";
 							}
 						?>
 
 						<li style = "color: white;">|</li>
 						<li style = "color: white;"><?php echo $_SESSION['login_user'];?></li>
-						<li class ="hover-underline-animation" style = "margin-right: 0vw;"><a href="signout.php">Sign Out</a></li>
+						<li style = "margin-right: 0vw;"><a href="signout.php">Sign Out</a></li>
 					</ul>
 				</div>
 				
@@ -120,11 +120,11 @@
 						<!-- Form for input fields -->
 						<form method = "post" id= "01_login">
 
-							<center><input style = "width: 20vw; height: 1.9vw; margin: 2vw 0vw 0vw 0vw;  font-family: 'Russo One', sans-serif; color: #000;" type = "text" name = "existing_username" placeholder="Existing Username..."/></center>
+							<center><input style = "width: 20vw; height: 1.9vw; margin: 2vw 0vw 0vw 0vw; font-family: 'Roboto', sans-serif; color: #fff;" type = "text" name = "existing_username" placeholder="Existing Username..."/></center>
 
-							<center><input style = "width: 20vw; height: 1.9vw; margin: 3.07vw 0vw 0vw 0vw;  font-family: 'Russo One', sans-serif; color: #000;" type = "password" name = "new_password" placeholder="New Password..." id="myInput"/></center>
+							<center><input style = "width: 20vw; height: 1.9vw; margin: 3.07vw 0vw 0vw 0vw; font-family: 'Roboto', sans-serif; color: #fff;" type = "password" name = "new_password" placeholder="New Password..." id="myInput"/></center>
 
-							<b><p style = "margin: 1.45vw 0vw -1.3vw 1.9vw; font-family: 'Russo One', sans-serif; font-size: 1vw; color: #000;">Show Password</p></b>
+							<b><p style = "margin: 1.45vw 0vw -1.3vw 1.9vw; font-family: 'Roboto', sans-serif; font-size: 1vw; color: #fff;">Show Password</p></b>
 
 							<!-- Checkbox for password visibility -->
 							<input type="checkbox" onclick="myFunction()"/>
@@ -152,9 +152,9 @@
 								$updatequery = "UPDATE user_details SET Password = '$NewPW' WHERE Username = '$ExistingUN'";
 
 								if (mysqli_query($conn,$updatequery)){
-									echo "<center><p style = 'color: #1eae6b; margin: 0.7vw 0vw 0vw 0vw; font-family: Russo One, sans-serif; font-size: 1vw;'>Password Successfully Updated</p></center>";
+									echo "<center><p style = 'color: #66bd76; margin: 0.7vw 0vw 0vw 0vw; font-family: Roboto, sans-serif; font-size: 1vw;'>Password Successfully Updated</p></center>";
 								} else{
-									echo "<center><p style = 'color: #dc323e; margin: 0.7vw 0vw 0vw 0vw; font-family: Russo One, sans-serif; font-size: 1vw;'>Invalid Credentials, Please Try Again</p></center>";
+									echo "<center><p style = 'color: #ff6161; margin: 0.7vw 0vw 0vw 0vw; font-family: Roboto, sans-serif; font-size: 1vw;'>Invalid Credentials, Please Try Again</p></center>";
 								}
 							}
 
@@ -171,7 +171,7 @@
 					<div class = "content_3" style = "background-color: transparent;">
 
 						<!-- query_rows for query title -->
-						<div class="query_rows" style="margin: 0vw 0vw 0vw 0vw; grid-row: 1; height: 2.5vw; display: grid; grid-template-columns: 3vw 0.6fr 0vw 0.6fr 0vw 0.6fr 0vw 0.4fr; border-bottom: 0.1vw solid #c2c2c2; background-color: #525252;">
+						<div class="query_rows" style="margin: 0vw 0vw 0vw 0vw; grid-row: 1; height: 2.5vw; display: grid; grid-template-columns: 3vw 0.6fr 0vw 0.6fr 0vw 0.6fr 0vw 0.4fr; border-bottom: 0.1vw solid #fff; background-color: #242424;">
 
 							<div class = "user_details1" style = "grid-column: 2;">
 								<b><p style = "color: white; font-size: 1.2vw; margin: 0vw 0vw 0vw 0vw; padding: 0.5vw 0vw 0.5vw 0vw;">User ID</p></b>
@@ -206,7 +206,7 @@
 						?>
 
 						<!-- query_rows for query output via SQL -->
-						<div class="query_rows" style="margin: 0vw 0vw 0vw 0vw; display: grid; grid-template-columns: 3vw 0.6fr 0vw 0.6fr 0vw 0.6fr 0vw 0.4fr; border-bottom: 0.1vw solid #c2c2c2;">
+						<div class="query_rows" style="margin: 0vw 0vw 0vw 0vw; display: grid; grid-template-columns: 3vw 0.6fr 0vw 0.6fr 0vw 0.6fr 0vw 0.4fr; border-bottom: 0.1vw solid #fff;">
 
 							<div class = "user_details1" style = "grid-column: 2;">
 								<b><p style = "color: white; font-size: 1.03vw; margin: 0vw 0vw 0vw 0vw; padding: 0.5vw 0vw 0.5vw 0vw;"><?php echo $output['Users_PK']; ?></b>
