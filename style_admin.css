@@ -1,6 +1,7 @@
 /* Style for overall website */
 html{
   background: black;
+  scroll-behavior: smooth; /* Makes the scroll smooth */
 }
 
 /* Style for body */
@@ -10,12 +11,11 @@ body {
   overflow: hidden;
 }
 
-/* Grid system has been created below */
+/* Main Grid system has been created below */
 .grid-container {
 	display: grid;
-	grid-template-columns: auto;
+	grid-template-columns: 28.5vw auto;
 	grid-template-rows: 4.25vw 48.3vw;
-	height: 100vh;
 }
 
 /* Style for nav (navigation) */
@@ -28,34 +28,55 @@ body {
 	z-index: 1;
 }
 
-/* Style for content_1, which contains the grid system for the login box and header */
-.content_1 {
-	background: lightblue;
-	opacity: ;
-	font-size: 1.1vw;
-	margin: 0vw 0vw 0vw 0vw;
-	grid-column: 1 / span 2;
-	grid-row: 2;
-	display: grid;
-	grid-template-columns: 36vw 27.5vw 36vw;
-	grid-template-rows: auto;
-	z-index: 1;
-}
-
 /* Style for login box */
 .login_box {
 	background: #ccb0f7;
 	box-sizing: border-box;
-	border-radius: 5%;
 	position: relative;
-	grid-column: 2;
-	grid-row: 1;
+	grid-column: 1;
+	grid-row: 2;
 	display: grid;
+}
+
+/* Style for text input */
+input[type=text] {
+	padding-left: 0.4vw;
+	padding-right: 0.4vw;
+	background: transparent;
+	border: none;
+  	border-bottom: 0.25vw solid #000;
+	outline: none;
+	font-size: 1.2vw;
+}
+
+/* Style for password input */
+input[type=password] {
+	padding-left: 0.4vw;
+	padding-right: 0.4vw;
+	background: transparent;
+	border: none;
+  	border-bottom: 0.25vw solid #000;
+	outline: none;
+	font-size: 1.2vw;
+}
+
+/* Style for submit input */
+input[type=submit] {
+	border: none;
+	outline: none;
+	font-size: 1.2vw;
+}
+
+input[type=submit]:hover {
+	background-color: #424242;
+	transition: 0.23s ease-in-out;
+	cursor: pointer;
 }
 
 /* Style for checkbox input */
 input[type=checkbox] {
-	margin: 0.1vw 0vw 0vw 3.8vw;
+	position: absolute;
+	margin: 0.1vw 0vw 0vw 4.2vw;
 	width: 1vw;
 	height: 1vw;
 }
@@ -68,4 +89,42 @@ a {
 
 .login_box a:hover {
 	text-decoration: underline;
+}
+
+/* Style for content_1 */
+.content_1 {
+	background: lightblue;
+	opacity: ;
+	font-size: 1.1vw;
+	margin: 0vw 0vw 0vw 0vw;
+	grid-column: 2;
+	grid-row: 2;
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: 17vw auto;
+	z-index: 1;
+}
+
+/* Style for header */
+.header {
+	background: transparent;
+	opacity: ;
+	font-size: 1.1vw;
+	grid-column: 1;
+	grid-row: 1;
+	display: grid;
+}
+
+/* Style for content_2 */
+.content_2 {
+	opacity: ;
+	font-size: 1.1vw;
+	overflow-y: auto;
+	margin: 2vw 12vw 0vw 12vw;
+	grid-column: 1;
+	grid-row: 2;
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: 0vw;
+	position: relative;
 }
