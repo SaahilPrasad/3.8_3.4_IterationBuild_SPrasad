@@ -44,22 +44,22 @@
 					<h3><form method = "post" id= "01_login">
 						
 						<p style = "margin: 2.3vw 0vw 0vw 3.7vw; font-size: 1.4vw;">Username:</p>
-						<input style = "width: 18.8vw; height: 1.9vw; margin: 1vw 2vw 0vw 3.7vw; font-size: 1.2vw;" type = "text" name = "username" placeholder="Your Username..."/>
+						<input style = "width: 18.8vw; height: 1.9vw; margin: 1vw 2vw 0vw 3.7vw;" type = "text" name = "username" placeholder="Your Username..."/>
 						
 						<p style = "margin: 1.5vw 0vw 0vw 3.7vw; font-size: 1.4vw;">Password:</p>
-						<input style = "width: 18.8vw; height: 1.9vw; margin: 1vw 2vw 0vw 3.7vw; font-size: 1.2vw;" type = "password" name = "password" placeholder="Your Password..." id="myInput"/>
+						<input style = "width: 18.8vw; height: 1.9vw; margin: 1vw 2vw 0vw 3.7vw;" type = "password" name = "password" placeholder="Your Password..." id="myInput"/>
 						
 						<p style = "margin: 1.3vw 0vw -1.3vw 5.3vw; font-size: 1vw;">Show Password</p>
 						
 						<!-- Checkbox for password visibility -->
 						<input type="checkbox" onclick="myFunction()"/>
 						
-						<input style = "width: 19.2vw; height: 2.5vw; margin: 2.8vw 2vw 0vw 3.7vw; font-size: 1.2vw;" type = "submit" value = "Login"/>
+						<input style = "width: 19.2vw; height: 2.5vw; margin: 2.8vw 2vw 0vw 3.7vw;" type = "submit" value = "Login"/>
 					
 					</form></h3>
 					
-					<center><p style = "margin: -6vw 0vw 0vw 0vw; font-size: 1vw;">Need An Account?<a href = "register_v1.html"> Register</a></p></center>
-
+					<center><p style = "margin: -6vw 0vw 0vw 0vw; font-size: 1vw;">Need An Account?<a href = "register_v2.html"> Register</a></p></center>
+					
 				</div>
 	
 			</div>
