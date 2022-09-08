@@ -26,32 +26,41 @@
 		<!-- grid-container class which contains all content using CSS grid -->
 		<div class="grid-container">
 		
-			<div class="nav1">
-				<b><p style = "color: white; font-size: 2vw; margin: 1vw 0vw 0vw 1vw;">Navigation</p></b>
-			</div>
-		
 			<!-- header class which consists of the header image, text and navigation system -->
 			<div class="header">
+				
 				<b><p style = "color: black; font-size: 2vw; margin: 1vw 0vw 0vw 1vw;">Header</p></b>
+				
+				<!-- navigation located at the very top -->		
+				<div class="nav" style = "top: 0vw; position: sticky;">
+					<b><p style = "color: white; font-size: 2vw; margin: 1vw 0vw 0vw 1vw;">Navigation</p></b>
+				</div>
+			
 			</div>
 			
 			<!-- search_content which contains the search system -->
-			<div class = "search_content">
-				<b><p style = "color: black; font-size: 2vw; margin: 1vw 0vw 0vw 1vw;">Search System</p></b>
+			<div class = "search_content" style="position: sticky; top: 0vw;">
+				<form>
+						
+					<center><input style="width: 45vw; height: 2.3vw; margin: 2.5vw 0vw 0vw 0vw; font-size: 1.1vw;" type="text" autocomplete="off" class="search" placeholder="Search For Music..." name="searched">
+						
+					<button class="button" style="height: 2.498vw; width: 7vw; margin: 0vw 0vw 0vw 0vw; font-size: 1.1vw;" type="submit">Search</button></center>
+						
+				</form>
 			</div>
 
 			<!-- total_duration which contains the total duration of all tracks/ songs -->
-			<div class = "total_duration">
+			<div class = "total_duration" style="position: sticky; top: 7vw;">
 				<b><p style = "color: black; font-size: 2vw; margin: 0.5vw 0vw 0vw 1vw;">Total Duration</p></b>
 			</div>
 
 			<!-- content_1 to hold the query headings and output -->
 			<div class = "content_1">
 			
-				<b><p style = "color: black; font-size: 2vw; margin: 1vw 5vw 0vw 5vw;">Query One Output</p></b>
+				<b><p style = "color: black; font-size: 2vw; margin: 1vw 0vw 0vw 1vw;">Query One Output</p></b>
 				
 				<!-- query_rows for query output via SQL -->
-				<div class="query_rows" style=" margin: 0vw 5vw 0vw 5vw; grid-column: 1 / span 2; grid-row: 1; display: grid; grid-template-columns: 0.17fr 1vw 0.08fr 1vw 0.47fr 1.3vw 0.37fr 1vw 0.6fr 1.4vw 0.3fr 1vw 0.25fr 1.3vw 0.17fr; background-color: #424242;">
+				<div class="query_rows" style=" margin: 0vw 0vw 0vw 0vw; grid-column: 1 / span 2; grid-row: 1; display: grid; grid-template-columns: 0.17fr 1vw 0.08fr 1vw 0.47fr 1.3vw 0.37fr 1vw 0.6fr 1.4vw 0.3fr 1vw 0.25fr 1.3vw 0.17fr; background-color: #424242; position: sticky; top: 10vw;">
 
 					<div class = "cover" style = "grid-column: 1;">
 						<b><p style = "color: white; font-size: 1.2vw; margin: 0.8vw 0vw 0vw 0vw;">Cover</p></b>
