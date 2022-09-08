@@ -11,33 +11,36 @@ body {
 /* Grid system has been created below */
 .grid-container {
 	display: grid;
-	grid-template-columns: 18vw auto;
-	grid-template-rows: 29vw 8.2vw 64vw 13vw;
-}
-
-/* Style for nav (navigation) */
-.nav1 {
-	background: #000;
-	opacity: ;
-	font-size: 1.35vw;
-	grid-column: 1;
-	grid-row: 1 / span 5;
-	z-index: 1;
+	grid-template-columns: auto;
+	grid-template-rows: 53vw 8.2vw 65vw 30vw 13vw;
 }
 
 /* Style for header, which contains the grid system for the navigation bar */
 .header {
 	background-color: lightblue;
-	grid-column: 2;
+	grid-column: 1 / span 2;
 	grid-row: 1;
 	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: 4.25vw;
+}
+
+/* Style for nav (navigation) */
+.nav {
+	box-sizing: border-box;
+	background: #000;
+	opacity: ;
+	font-size: 1.35vw;
+	grid-column: 1 / span 2;
+	grid-row: 1;
+	z-index: 1;
 }
 
 /* Style for space_1, which creates space between contents */
 .space_1 {
 	background: #fff;
 	opacity: ;
-	grid-column: 2;
+	grid-column: 1 / span 2;
 	grid-row: 2;
 	z-index: 2;
 }
@@ -47,8 +50,8 @@ body {
 	background: #fff;
 	opacity: ;
 	font-size: 1.1vw;
-	margin: 0vw 13vw 0vw 13vw;
-	grid-column: 2;
+	margin: 0vw 15vw 0vw 15vw;
+	grid-column: 1 / span 2;
 	grid-row: 3;
 	display: grid;
 	grid-template-columns: auto;
@@ -65,15 +68,13 @@ body {
 	grid-column: 1;
 	grid-row: 1;
 	display: grid;
-	grid-template-columns: 0.5fr 2.3vw 0.5fr 2.3vw 0.5fr 2.3vw 0.5fr;
+	grid-template-columns: 0.5fr 2.1vw 0.5fr 2.1vw 0.5fr 2.1vw 0.5fr 2.1vw 0.5fr;
 	grid-template-rows: 11.8vw;
 	z-index: 1;
 }
 
 .genre1 {
 	box-sizing: border-box;
-	border-radius: 10%;
-	border: 0.2vw solid #000;
 	background: #ffb282;
 	opacity: ;
 	grid-column: 1;
@@ -83,8 +84,6 @@ body {
 
 .genre2 {
 	box-sizing: border-box;
-	border-radius: 10%;
-	border: 0.2vw solid #000;
 	background: #ffb282;
 	opacity: ;
 	grid-column: 3;
@@ -94,8 +93,6 @@ body {
 
 .genre3 {
 	box-sizing: border-box;
-	border-radius: 10%;
-	border: 0.2vw solid #000;
 	background: #ffb282;
 	opacity: ;
 	grid-column: 5;
@@ -105,11 +102,18 @@ body {
 
 .genre4 {
 	box-sizing: border-box;
-	border-radius: 10%;
-	border: 0.2vw solid #000;
 	background: #ffb282;
 	opacity: ;
 	grid-column: 7;
+	grid-row: 1;
+	z-index: 1;
+}
+
+.genre5 {
+	box-sizing: border-box;
+	background: #ffb282;
+	opacity: ;
+	grid-column: 9;
 	grid-row: 1;
 	z-index: 1;
 }
@@ -123,15 +127,13 @@ body {
 	grid-column: 1;
 	grid-row: 2;
 	display: grid;
-	grid-template-columns: 0.5fr 2.3vw 0.5fr 2.3vw 0.5fr 2.3vw 0.5fr;
+	grid-template-columns: 0.5fr 2.1vw 0.5fr 2.1vw 0.5fr 2.1vw 0.5fr 2.1vw 0.5fr;
 	grid-template-rows: 11.8vw;
 	z-index: 1;
 }
 
 .song1 {
 	box-sizing: border-box;
-	border-radius: 10%;
-	border: 0.2vw solid #000;
 	background: #ffb282;
 	opacity: ;
 	grid-column: 1;
@@ -141,8 +143,6 @@ body {
 
 .song2 {
 	box-sizing: border-box;
-	border-radius: 10%;
-	border: 0.2vw solid #000;
 	background: #ffb282;
 	opacity: ;
 	grid-column: 3;
@@ -152,8 +152,6 @@ body {
 
 .song3 {
 	box-sizing: border-box;
-	border-radius: 10%;
-	border: 0.2vw solid #000;
 	background: #ffb282;
 	opacity: ;
 	grid-column: 5;
@@ -163,11 +161,18 @@ body {
 
 .song4 {
 	box-sizing: border-box;
-	border-radius: 10%;
-	border: 0.2vw solid #000;
 	background: #ffb282;
 	opacity: ;
 	grid-column: 7;
+	grid-row: 1;
+	z-index: 1;
+}
+
+.song5 {
+	box-sizing: border-box;
+	background: #ffb282;
+	opacity: ;
+	grid-column: 9;
 	grid-row: 1;
 	z-index: 1;
 }
@@ -181,17 +186,16 @@ body {
 	grid-column: 1;
 	grid-row: 3;
 	display: grid;
-	grid-template-columns: 0.5fr 2.3vw 0.5fr 2.3vw 0.5fr 2.3vw 0.5fr;
+	grid-template-columns: 0.5fr 2.1vw 0.5fr 2.1vw 0.5fr 2.1vw 0.5fr 2.1vw 0.5fr;
 	grid-template-rows: 11.8vw;
 	z-index: 1;
 }
 
 .artist1 {
 	box-sizing: border-box;
-	border-radius: 10%;
-	border: 0.2vw solid #000;
 	background: #ffb282;
 	opacity: ;
+	border-radius: 50%;
 	grid-column: 1;
 	grid-row: 1;
 	z-index: 1;
@@ -199,10 +203,9 @@ body {
 
 .artist2 {
 	box-sizing: border-box;
-	border-radius: 10%;
-	border: 0.2vw solid #000;
 	background: #ffb282;
 	opacity: ;
+	border-radius: 50%;
 	grid-column: 3;
 	grid-row: 1;
 	z-index: 1;
@@ -210,10 +213,9 @@ body {
 
 .artist3 {
 	box-sizing: border-box;
-	border-radius: 10%;
-	border: 0.2vw solid #000;
 	background: #ffb282;
 	opacity: ;
+	border-radius: 50%;
 	grid-column: 5;
 	grid-row: 1;
 	z-index: 1;
@@ -221,12 +223,33 @@ body {
 
 .artist4 {
 	box-sizing: border-box;
-	border-radius: 10%;
-	border: 0.2vw solid #000;
 	background: #ffb282;
 	opacity: ;
+	border-radius: 50%;
 	grid-column: 7;
 	grid-row: 1;
+	z-index: 1;
+}
+
+.artist5 {
+	box-sizing: border-box;
+	background: #ffb282;
+	opacity: ;
+	border-radius: 50%;
+	grid-column: 9;
+	grid-row: 1;
+	z-index: 1;
+}
+
+/* Style for promotion_header for Graeme's two playlists */
+.promotion_header {
+	background: #ccb0f7;
+	opacity: ;
+	font-size: 1.1vw;
+	margin: 0vw 0vw 0vw 0vw;
+	grid-column: 1 / span 2;
+	grid-row: 4;
+	display: grid;
 	z-index: 1;
 }
 
@@ -236,8 +259,8 @@ body {
 	opacity: ;
 	font-size: 1.1vw;
 	margin: 0vw 0vw 0vw 0vw;
-	grid-column: 2;
-	grid-row: 4;
+	grid-column: 1 / span 2;
+	grid-row: 5;
 	display: grid;
 	z-index: 1;
 }
