@@ -1,3 +1,14 @@
+<!-- Session - ensures that user is logged in to grant access to page -->
+<?php
+	session_start();
+    if(!isset($_SESSION['login_user'])){
+		header("location:login.php");
+	}
+	else{
+		$User = $_SESSION['login_user'];
+	}
+?>
+
 <!-- HTML starts here -->
 <!DOCTYPE html>
 
@@ -5,6 +16,9 @@
 <html lang="en">
 	
 	<head>
+		<!-- Favicon (Zeta icon), which will be displayed on browser tabs -->
+		<link rel="icon" type="image/x-icon" href="images/zetafavicon1.png">
+		
 		<!-- Title, which will be displayed on browser tabs -->
 		<title>ZetaMusic | Home</title>
 		
@@ -19,97 +33,211 @@
 		
 		<!-- Link to style sheet -->
 		<link rel="stylesheet" href="css/style_index.css"/>
+		
+		<!-- Link to javascript files -->
+		<script src="js/script.js"></script>
+		<script src="js/back_to_top.js"></script>
 	</head>
 	
 	<body>
 	
 		<!-- grid-container class which contains all content using CSS grid -->
 		<div class="grid-container">
-		
-			<div class="nav1">
-				<b><p style = "color: white; font-size: 2vw; margin: 1vw 0vw 0vw 1vw;">Navigation</p></b>
+			
+			<!-- Zeta loading screen -->
+			<div class="loading_screen">
+				<center>
+					<img class = "zoom-in-out-box" src="images/officialzetalogo.png" alt = "Zeta Logo" style = "height: 3.5vw; width: 14.2vw;">
+					<h1 style = "font-family: 'Roboto', sans-serif; font-size: 1.5vw; color: #fff; padding: 1.2vw 0vw 0vw 0vw;">Loading Your Zeta Music Experience, <?php echo $_SESSION['login_user'];?>...</h1>
+				</center>
 			</div>
 			
-			<!-- header class which consists of the header image, text -->
-			<div class="header" style="background-image: url('images/header2.jpg'); background-size: 100vw 55vw;">
-				<b><p style = "color: black; font-size: 2vw; margin: 1vw 0vw 0vw 1vw;">Header</p></b>
+			<script src="js/loading.js"></script>
+			
+			<!-- header class which consists of the header image, text logo and navigation system -->
+			<div class="header" style="background-image: url('images/mainheader.jpg'); background-size: 100vw 55vw; background-position: 0vw;">
+				
+				<?php
+				if(session_id() == ''){session_start();}
+				if(isset($_SESSION['login_user'])){
+				?>
+				
+				<!-- Logo box -->
+				<div class="logo" style="top: 0vw; position: sticky;">
+					<div class = "logo2">
+						<ul>
+							<li>
+								<a href="index.php"><img src="images/officialzetalogo.png" alt = "Zeta Logo" style = "height: 3.3vw; width: 13.3vw; margin-top: -0.95vw;"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				<!-- navigation located at the very top -->
+				<div class="nav" style="top: 0vw; position: sticky;">
+					<ul>
+						<li class ="hover-underline-animation" style="margin-left: 0vw; margin-right: 0vw;"><a href="query1.php">Query One</a></li>
+						<li class ="hover-underline-animation"><a href="query2.php">Query Two</a></li>
+
+						<!-- Determines if the user is a standard user or admin (Graeme) and will output the navigation links with respect to this -->
+						<?php
+							if ($_SESSION['login_user'] == "Graeme" or $_SESSION['login_user'] == "graeme"){
+								echo "<li class ='hover-underline-animation'><a href='admin1.php'>Settings</a></li>";
+							}
+						?>
+						
+						<li style = "color: white; margin-right: 1.1vw; ">|</li>
+						<li>
+						<img src="images/usericon2.png" alt = "User Icon 2" style = "height: 1.8vw; width: 1.8vw; position: absolute; margin: -0.3vw 0vw 0vw -1.5vw;">
+						</li>
+						<li style = "margin-left: -1.5vw; color: white;"><?php echo $_SESSION['login_user'];?></li>
+						<li class ="hover-underline-animation" style = "margin-right: 0vw;"><a href="signout.php">Sign Out</a></li>
+					</ul>
+				</div>
+				
+				<!-- Text displayed in header -->
+				<div class = "headertext">
+					<h1 style = "padding: 7.95vw 0vw 0vw 6vw;">Elevate Your Listening Experience...</h1>
+				</div>
+				
+				<div class = "headertext2">
+					<form action="#search_content"><input style = "font-size: 2.5vw; width: 21vw; height: 3.7vw; margin: 0vw 0vw 0vw 0vw;" type = "submit" value = "Browse Now"/></form>
+				</div>
+				
 			</div>
 			
-			<!-- Creates space between contents via CSS grid -->			
+			<?php } else {
+			?>
+			
+			<?php }
+			?>
+			
+			<!-- search_content which contains the search system -->
+			<div id="search_content">
+				
+				<center><form action="search.php" method="post">
+					<input type="text" autocomplete="off" class="search" style = "border: 0.25vw solid #fff; font-family: 'Roboto', sans-serif;" placeholder="Search For Music..." name="search">
+					<button class="button" type="submit"><img src="images/searchicon12.png" alt = "Search Icon" style = "height: 2.6vw; width: 2.6vw; margin-top: -1.75vw; margin-left: -1.2vw; position: absolute;"></button>
+				</form></center>
+			
+			</div>
+			
+			<div class = "line">
+			</div>
+			
+			<!-- Creates space between contents via CSS grid -->
 			<div class="space_1">
 			</div>
 			
-			<!-- content_1 to hold the genre, song and artist covers' classes -->
+			<!-- content_1 to hold the genre and playlist image classes -->
 			<div class = "content_1">
 				
-				<!-- content_genre class to hold all genre covers/ images -->
+				<!-- content_genre class to hold genre text and all genre covers/ images -->
 				<div class = "content_genre">
-				
-					<div class = "genre1">
-						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Genre 1</p></b>
+					
+					<div class = "genretext">
+						<h3 style = "margin-top: 0vw;">Genres</h3>
+						<p style = "margin-top: -2.3vw;">Explore Some Of Our Popular Genres!</p>
 					</div>
 					
-					<div class = "genre2">
-						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Genre 2</p></b>
+					<div class = "genre1" style = "overflow: hidden; transition: 0.6s; cursor: pointer;">
+						<a href="pop.php"><img src="images/genre1.jpg" alt = "Genre 1 - Pop" style = "width: 15vw; height: 12vw;">
+						<div class="overlay">
+    						<div class="text" style = "margin-top: 10vw; margin-left: 5.4vw;">Pop</div>
+  						</div></a>
 					</div>
 					
-					<div class = "genre3">
-						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Genre 3</p></b>
+					<div class = "genre2" style = "overflow: hidden; transition: 0.6s; cursor: pointer;">
+						<a href="country.php"><img src="images/genre2.jpg" alt = "Genre 2 - Country" style = "width: 15vw; height: 12vw;">
+						<div class="overlay">
+    						<div class="text" style = "margin-top: 10vw; margin-left: 5.4vw;">Country</div>
+  						</div></a>
 					</div>
 					
-					<div class = "genre4">
-						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Genre 4</p></b>
+					<div class = "genre3" style = "overflow: hidden; transition: 0.6s; cursor: pointer;">
+						<a href="rock.php"><img src="images/genre3.jpg" alt = "Genre 3 - Rock" style = "width: 15vw; height: 12vw;">
+						<div class="overlay">
+    						<div class="text" style = "margin-top: 10vw; margin-left: 5.4vw;">Rock</div>
+						</div></a>
+					</div>
+					
+					<div class = "genre4" style = "overflow: hidden; transition: 0.6s; cursor: pointer;">
+						<a href="folk.php"><img src="images/genre4.jpg" alt = "Genre 4 - Folk" style = "width: 15vw; height: 12vw;">
+						<div class="overlay">
+    						<div class="text" style = "margin-top: 10vw; margin-left: 5.4vw;">Folk</div>
+						</div></a>
 					</div>
 
 				</div>
 				
-				<!-- content_song class to hold all song covers/ images -->
-				<div class = "content_song">
-				
-					<div class = "song1" style = "margin: 0vw 0vw 0vw 0vw;">
-						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Song 1</p></b>
-					</div>
+				<!-- content_playlist class to hold playlist text and all playlist images -->
+				<div class = "content_playlist">
 					
-					<div class = "song2">
-						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Song 2</p></b>
-					</div>
-					
-					<div class = "song3">
-						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Song 3</p></b>
-					</div>
-					
-					<div class = "song4">
-						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Song 4</p></b>
+					<div class = "playlisttext">
+						<h3 style = "margin-top: 0vw;">Playlists</h3>
+						<p style = "margin-top: -2.3vw;">Suggested Playlists For You To Delve Into!</p>
 					</div>
 				
-				</div>
-				
-				<!-- content_artist class to hold all artist covers/ images -->
-				<div class = "content_artist">
-				
-					<div class = "artist1" style = "margin: 0vw 0vw 0vw 0vw;">
-						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Artist 1</p></b>
+					<div class = "playlist1" style = "overflow: hidden; transition: 0.6s; cursor: pointer;">
+						<a href="airplane.php"><img src="images/playlist1.jpg" alt = "Playlist 1 - Airplane Mode" style = "width: 15vw; height: 12vw;">
+						<div class="overlay">
+    						<div class="text" style = "margin-top: 10vw; margin-left: 5.4vw;">Airplane Mode</div>
+						</div></a>
 					</div>
 					
-					<div class = "artist2">
-						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Artist 2</p></b>
+					<div class = "playlist2" style = "overflow: hidden; transition: 0.6s; cursor: pointer;">
+						<a href="onthego.php"><img src="images/playlist2.jpg" alt = "Playlist 2 - On The Go" style = "width: 15vw; height: 12vw;">
+						<div class="overlay">
+							<div class="text" style = "margin-top: 10vw; margin-left: 5.4vw;">On The Go</div>
+						</div></a>
 					</div>
 					
-					<div class = "artist3">
-						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Artist 3</p></b>
+					<div class = "playlist3" style = "overflow: hidden; transition: 0.6s; cursor: pointer;">
+						<a href="thejourney.php"><img src="images/playlist3.jpg" alt = "Playlist 3 - The Journey" style = "width: 15vw; height: 12vw;">
+						<div class="overlay">
+							<div class="text" style = "margin-top: 10vw; margin-left: 5.4vw;">The Journey</div>
+						</div></a>
 					</div>
 					
-					<div class = "artist4">
-						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Artist 4</p></b>
+					<div class = "playlist4" style = "overflow: hidden; transition: 0.6s; cursor: pointer;">
+						<a href="studying.php"><img src="images/playlist4.jpg" alt = "Playlist 4 - Studying Tunes" style = "width: 15vw; height: 12vw;">
+						<div class="overlay">
+							<div class="text" style = "margin-top: 10vw; margin-left: 5.4vw;">Study Tunes</div>
+						</div></a>
 					</div>
-				
+
 				</div>
 			
 			</div>
 			
+			<!-- promotion_header class to promote/ advertise Graeme's two playlists (Query One, Query Two) -->
+			<div class = "promotion_header" style="background-image: url('images/promoheader.jpg'); background-size: 100vw 30vw; background-position: 0vw;">
+				<div class = "promotiontext1">
+					<h2 style = "font-size: 3.7vw; padding: 2vw 0vw 0vw 6vw;">Check Out Graeme's<br>Playlists!</h2>
+					<h3 style = "font-size: 2.6vw; margin: -16.1vw 0vw 0vw 90vw; color: #b6f9f2;">NEW</h3>
+				</div>
+				
+				<div class = "promotiontext2">
+					<form action="query1.php"><input style = "font-size: 2vw; width: 18vw; height: 3.5vw; margin: 0vw 0vw 0vw 0vw;" type = "submit" value = "Party All Day"/></form>
+				</div>
+				
+				<div class = "promotiontext3">
+					<center><h3 style = "font-size: 3.3vw; margin-top: 0vw; color: #fff;">|</h3></center>
+				</div>
+				
+				<div class = "promotiontext4">
+					<form action="query2.php"><input style = "font-size: 2vw; width: 18vw; height: 3.5vw; margin: 0vw 0vw 0vw 0vw;" type = "submit" value = "Party All Night"/></form>
+				</div>
+			</div>
+			
 			<!-- footer class to display legal message - sources and copyright statement -->
 			<div class = "footer">
-				<b><p style = "color: black; font-size: 2vw; margin: 1vw 0vw 0vw 1vw;">Footer</p></b>
+				<p style = "font-family: 'Roboto', sans-serif; font-size: 1.1vw; color: #fff; margin-top: 4.1vw; margin-left: 6vw;">All Album Covers Have Been Sourced From Spotify.<br>All Other Images Have Been Sourced From Unsplash,<br>Creative Commons & Canva.</p>
+				<b><p style = "font-family: 'Roboto', sans-serif; font-size: 1.1vw; color: #3d99b8; margin-top: -1.2vw; margin-left: 6vw;">&copy Copyright Saahil Prasad 2022, All Rights Reserved.</p></b>
+				
+				<div id = "back_to_top_btn1" onclick="topFunction()" style="height: 8vw; width: 8vw; margin: -9.5vw 0vw 0vw 85.3vw;">
+					<img src="images/back_to_top_btn.png" alt = "Back To Top Btn" style="height: 8vw; width: 8.5vw; transition: 0.5s;">
+				</div>
 			</div>
 			
 		</div>
