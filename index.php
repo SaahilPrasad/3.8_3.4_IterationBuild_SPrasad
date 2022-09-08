@@ -42,7 +42,7 @@
 		<div class="grid-container">
 
 			<!-- header class which consists of the header image, text logo and navigation system -->
-			<div class="header" style="background-image: url('images/trial2/mainheader2.jpg'); background-size: 100vw 55vw; background-position: 0vw;">
+			<div class="header" style="background-image: url('images/mainheader.jpg'); background-size: 100vw 55vw; background-position: 0vw;">
 				
 				<?php
 				if(session_id() == ''){session_start();}
@@ -54,7 +54,7 @@
 					<div class = "logo2">
 						<ul>
 							<li>
-								<a href="index.php"><img src="images/trial2/zetalogo2.png" alt = "Zeta Logo" style = "height: 3.5vw; width: 11.5vw; margin: -1.15vw 0vw 0vw -0.3vw;"></a>
+								<a href="index.php"><img src="images/zetalogo1.png" alt = "Zeta Logo" style = "height: 3.5vw; width: 11.5vw; margin: -1.15vw 0vw 0vw -0.3vw;"></a>
 							</li>
 						</ul>
 					</div>
@@ -75,7 +75,7 @@
 						
 						<li style = "color: white; margin-right: 1.1vw; ">|</li>
 						<li>
-						<img src="images/trial2/usericon4.png" alt = "User Icon 2" style = "height: 1.8vw; width: 1.8vw; position: absolute; margin: -0.3vw 0vw 0vw -1.5vw;">
+						<img src="images/usericon2.png" alt = "User Icon 2" style = "height: 1.8vw; width: 1.8vw; position: absolute; margin: -0.3vw 0vw 0vw -1.5vw;">
 						</li>
 						<li style = "margin-left: -1.5vw; color: white;"><?php echo $_SESSION['login_user'];?></li>
 						<li class ="hover-underline-animation" style = "margin-right: 0vw;"><a href="signout.php">Sign Out</a></li>
@@ -104,7 +104,7 @@
 				
 				<center><form action="search.php" method="post">
 					<input type="text" autocomplete="off" class="search" style = "border: 0.25vw solid #fff; font-family: 'Roboto', sans-serif;" placeholder="Search For Music..." name="search">
-					<button class="button" type="submit"><img src="images/trial2/searchicon2.png" alt = "Search Icon" style = "height: 2.6vw; width: 2.6vw; margin-top: -1.75vw; margin-left: -1.2vw; position: absolute;"></button>
+					<button class="button" type="submit"><img src="images/searchicon1.png" alt = "Search Icon" style = "height: 2.6vw; width: 2.6vw; margin-top: -1.75vw; margin-left: -1.2vw; position: absolute;"></button>
 				</form></center>
 			
 			</div>
@@ -128,28 +128,28 @@
 					</div>
 					
 					<div class = "genre1" style = "overflow: hidden; transition: 0.6s; cursor: pointer;">
-						<a href="pop.php"><img src="images/trial2/genre5.jpg" alt = "Genre 1 - Pop" style = "width: 15vw; height: 12vw;">
+						<a href="pop.php"><img src="images/genre1.jpg" alt = "Genre 1 - Pop" style = "width: 15vw; height: 12vw;">
 						<div class="overlay">
     						<div class="text" style = "margin-top: 10vw; margin-left: 5.4vw;">Pop</div>
   						</div></a>
 					</div>
 					
 					<div class = "genre2" style = "overflow: hidden; transition: 0.6s; cursor: pointer;">
-						<a href="country.php"><img src="images/trial2/genre6.jpg" alt = "Genre 2 - Country" style = "width: 15vw; height: 12vw;">
+						<a href="country.php"><img src="images/genre2.jpg" alt = "Genre 2 - Country" style = "width: 15vw; height: 12vw;">
 						<div class="overlay">
     						<div class="text" style = "margin-top: 10vw; margin-left: 5.4vw;">Country</div>
   						</div></a>
 					</div>
 					
 					<div class = "genre3" style = "overflow: hidden; transition: 0.6s; cursor: pointer;">
-						<a href="rock.php"><img src="images/trial2/genre7.jpg" alt = "Genre 3 - Rock" style = "width: 15vw; height: 12vw;">
+						<a href="rock.php"><img src="images/genre3.jpg" alt = "Genre 3 - Rock" style = "width: 15vw; height: 12vw;">
 						<div class="overlay">
     						<div class="text" style = "margin-top: 10vw; margin-left: 5.4vw;">Rock</div>
 						</div></a>
 					</div>
 					
 					<div class = "genre4" style = "overflow: hidden; transition: 0.6s; cursor: pointer;">
-						<a href="folk.php"><img src="images/trial2/genre8.jpg" alt = "Genre 4 - Folk" style = "width: 15vw; height: 12vw;">
+						<a href="folk.php"><img src="images/genre4.jpg" alt = "Genre 4 - Folk" style = "width: 15vw; height: 12vw;">
 						<div class="overlay">
     						<div class="text" style = "margin-top: 10vw; margin-left: 5.4vw;">Folk</div>
 						</div></a>
@@ -166,28 +166,28 @@
 					</div>
 				
 					<div class = "playlist1" style = "overflow: hidden; transition: 0.6s; cursor: pointer;">
-						<a href="airplane.php"><img src="images/trial2/playlist5.jpg" alt = "Playlist 1 - Airplane Mode" style = "width: 15vw; height: 12vw;">
+						<a href="airplane.php"><img src="images/playlist1.jpg" alt = "Playlist 1 - Airplane Mode" style = "width: 15vw; height: 12vw;">
 						<div class="overlay">
     						<div class="text" style = "margin-top: 10vw; margin-left: 5.4vw;">Airplane Mode</div>
 						</div></a>
 					</div>
 					
 					<div class = "playlist2" style = "overflow: hidden; transition: 0.6s; cursor: pointer;">
-						<a href="onthego.php"><img src="images/trial2/playlist6.jpg" alt = "Playlist 2 - On The Go" style = "width: 15vw; height: 12vw;">
+						<a href="onthego.php"><img src="images/playlist2.jpg" alt = "Playlist 2 - On The Go" style = "width: 15vw; height: 12vw;">
 						<div class="overlay">
 							<div class="text" style = "margin-top: 10vw; margin-left: 5.4vw;">On The Go</div>
 						</div></a>
 					</div>
 					
 					<div class = "playlist3" style = "overflow: hidden; transition: 0.6s; cursor: pointer;">
-						<a href="thejourney.php"><img src="images/trial2/playlist7.jpg" alt = "Playlist 3 - The Journey" style = "width: 15vw; height: 12vw;">
+						<a href="thejourney.php"><img src="images/playlist3.jpg" alt = "Playlist 3 - The Journey" style = "width: 15vw; height: 12vw;">
 						<div class="overlay">
 							<div class="text" style = "margin-top: 10vw; margin-left: 5.4vw;">The Journey</div>
 						</div></a>
 					</div>
 					
 					<div class = "playlist4" style = "overflow: hidden; transition: 0.6s; cursor: pointer;">
-						<a href="studying.php"><img src="images/trial2/playlist8.jpg" alt = "Playlist 4 - Studying Tunes" style = "width: 15vw; height: 12vw;">
+						<a href="studying.php"><img src="images/playlist4.jpg" alt = "Playlist 4 - Studying Tunes" style = "width: 15vw; height: 12vw;">
 						<div class="overlay">
 							<div class="text" style = "margin-top: 10vw; margin-left: 5.4vw;">Studying Tunes</div>
 						</div></a>
@@ -198,7 +198,7 @@
 			</div>
 			
 			<!-- promotion_header class to promote/ advertise Graeme's two playlists (Query One, Query Two) -->
-			<div class = "promotion_header" style="background-image: url('images/trial2/promoheader2.jpg'); background-size: 100vw 30vw; background-position: 0vw;">
+			<div class = "promotion_header" style="background-image: url('images/promoheader.jpg'); background-size: 100vw 30vw; background-position: 0vw;">
 				<div class = "promotiontext1">
 					<h2 style = "font-size: 3.7vw; padding: 2vw 0vw 0vw 6vw;">Check Out Graeme's<br>Playlists!</h2>
 					<h3 style = "font-size: 2.6vw; margin: -16.1vw 0vw 0vw 90vw; color: #b6f9f2;">NEW</h3>
@@ -224,7 +224,7 @@
 				<b><p style = "font-size: 1.1vw; margin-top: -1.2vw; margin-left: 6vw;">&copy Copyright Saahil Prasad 2022, All Rights Reserved.</p></b>
 				
 				<div id = "back_to_top_btn1" onclick="topFunction()" style="height: 8vw; width: 8vw; margin: -9.5vw 0vw 0vw 85.3vw;">
-					<img src="images/trial2/back_to_top_btn_2.png" alt = "Back To Top Btn" style="height: 8vw; width: 8.5vw; transition: 0.5s;">
+					<img src="images/back_to_top_btn.png" alt = "Back To Top Btn" style="height: 8vw; width: 8.5vw; transition: 0.5s;">
 				</div>
 			</div>
 			

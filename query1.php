@@ -42,7 +42,7 @@
 		<div class="grid-container">
 		
 			<!-- header class which consists of the header image, text logo and navigation system -->
-			<div class="header" style="background-image: url('images/trial2/zetaheader11.jpg'); background-size: 100vw 25vw; background-position: 0vw;">
+			<div class="header" style="background-image: url('images/zetaheader1.jpg'); background-size: 100vw 25vw; background-position: 0vw;">
 				
 				<?php
 				if(session_id() == ''){session_start();}
@@ -54,7 +54,7 @@
 					<div class = "logo2">
 						<ul>
 							<li>
-								<a href="index.php"><img src="images/trial2/zetalogo2.png" alt = "Zeta Logo" style = "height: 3.5vw; width: 11.5vw; margin: -1.15vw 0vw 0vw -0.3vw;"></a>
+								<a href="index.php"><img src="images/zetalogo1.png" alt = "Zeta Logo" style = "height: 3.5vw; width: 11.5vw; margin: -1.15vw 0vw 0vw -0.3vw;"></a>
 							</li>
 						</ul>
 					</div>
@@ -75,7 +75,7 @@
 						
 						<li style = "color: white; margin-right: 1.1vw; ">|</li>
 						<li>
-						<img src="images/trial2/usericon4.png" alt = "User Icon 2" style = "height: 1.8vw; width: 1.8vw; position: absolute; margin: -0.3vw 0vw 0vw -1.5vw;">
+						<img src="images/usericon2.png" alt = "User Icon 2" style = "height: 1.8vw; width: 1.8vw; position: absolute; margin: -0.3vw 0vw 0vw -1.5vw;">
 						</li>
 						<li style = "margin-left: -1.5vw; color: white;"><?php echo $_SESSION['login_user'];?></li>
 						<li class ="hover-underline-animation" style = "margin-right: 0vw;"><a href="signout.php">Sign Out</a></li>
@@ -102,7 +102,7 @@
 				
 				<center><form action="search.php" method="post">
 					<input type="text" autocomplete="off" class="search" style = "font-family: 'Roboto', sans-serif; font-size: 1vw;" placeholder="Search For Music..." name="search">
-					<button class="button" type="submit"><img src="images/trial2/searchicon2.png" alt = "Search Icon" style = "height: 2.3vw; width: 2.3vw; margin-top: -1.5vw; margin-left: -1.2vw; position: absolute;"></button>
+					<button class="button" type="submit"><img src="images/searchicon1.png" alt = "Search Icon" style = "height: 2.3vw; width: 2.3vw; margin-top: -1.5vw; margin-left: -1.2vw; position: absolute;"></button>
 				</form></center>
 			
 			</div>
@@ -126,7 +126,7 @@
 			<!-- total_duration which contains the total duration of all tracks/ songs -->
 			<div class = "total_duration" style="position: sticky; top: 6vw;">
 				<div class = "clock">
-					<img src="images/trial2/clockicon2.png" alt = "Clock Icon" style = "height: 1.5vw; width: 1.5vw; position: absolute; margin-top: 0.07vw; margin-left: 0.4vw;">
+					<img src="images/clockicon1.png" alt = "Clock Icon" style = "height: 1.5vw; width: 1.5vw; position: absolute; margin-top: 0.07vw; margin-left: 0.4vw;">
 				</div>
 				<div class = "durationtxt">
 					<center><b><p style = "color: white; font-family: 'Roboto', sans-serif; font-size: 1.3vw; margin-top: 0.05vw; position: absolute;"><?php echo $output['Total Duration']; ?></b></center>
@@ -255,7 +255,7 @@
 				<b><p style = "font-family: 'Noto Sans', sans-serif; font-size: 1.1vw; color: #fff; margin-top: -1.2vw; margin-left: 6vw;">&copy Copyright Saahil Prasad 2022, All Rights Reserved.</p></b>
 				
 				<div id = "back_to_top_btn1" onclick="topFunction()" style="height: 8vw; width: 8vw; margin: -9.5vw 0vw 0vw 85.3vw;">
-					<img src="images/trial2/back_to_top_btn_2.png" alt = "Back To Top Btn" style="height: 8vw; width: 8.5vw; transition: 0.5s;">
+					<img src="images/back_to_top_btn.png" alt = "Back To Top Btn" style="height: 8vw; width: 8.5vw; transition: 0.5s;">
 				</div>
 			</div>
 

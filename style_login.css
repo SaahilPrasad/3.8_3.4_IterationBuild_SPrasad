@@ -64,7 +64,7 @@ h2 {
 .logo2 {
 	box-sizing: border-box;
 	margin-left: 6vw;
-	/*background: #fff;*/
+	background: #fff;
 	opacity: ;
 	grid-column: 1;
 	grid-row: 1;

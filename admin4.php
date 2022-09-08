@@ -54,7 +54,7 @@
 					<div class = "logo2">
 						<ul>
 							<li>
-								<a href="index.php"><img src="images/trial2/zetalogo2.png" alt = "Zeta Logo" style = "height: 3.5vw; width: 11.5vw; margin: -1.15vw 0vw 0vw -0.3vw;"></a>
+								<a href="index.php"><img src="images/zetalogo1.png" alt = "Zeta Logo" style = "height: 3.5vw; width: 11.5vw; margin: -1.15vw 0vw 0vw -0.3vw;"></a>
 							</li>
 						</ul>
 					</div>
@@ -75,7 +75,7 @@
 						
 						<li style = "color: white; margin-right: 1.1vw; ">|</li>
 						<li>
-						<img src="images/trial2/usericon4.png" alt = "User Icon 2" style = "height: 1.8vw; width: 1.8vw; position: absolute; margin: -0.3vw 0vw 0vw -1.5vw;">
+						<img src="images/usericon2.png" alt = "User Icon 2" style = "height: 1.8vw; width: 1.8vw; position: absolute; margin: -0.3vw 0vw 0vw -1.5vw;">
 						</li>
 						<li style = "margin-left: -1.5vw; color: white;"><?php echo $_SESSION['login_user'];?></li>
 						<li class ="hover-underline-animation" style = "margin-right: 0vw;"><a href="signout.php">Sign Out</a></li>
@@ -94,7 +94,7 @@
 			<div class = "content_1">
 				
 				<!-- header -->
-				<div class = "header" style="background-image: url('images/trial2/zetaadmin4.jpg'); background-size: 71vw 50vw; background-position: 0vw;">
+				<div class = "header" style="background-image: url('images/zetaadmin3.jpg'); background-size: 71vw 50vw; background-position: 0vw;">
 					<b><h1>Administrator Settings<br>To Enhance Security</h1></b>
 					
 					<div class = "btn1">
@@ -118,7 +118,7 @@
 				<div class = "login_box">
 					
 					<div class = "logintext">
-						<img src="images/trial2/usericon3.png" alt = "User Icon 1" style = "height: 6.5vw; width: 6.5vw; background-position: 0vw; margin: 3.8vw 0vw 0vw 1vw;">
+						<img src="images/usericon1.png" alt = "User Icon 1" style = "height: 6.5vw; width: 6.5vw; background-position: 0vw; margin: 3.8vw 0vw 0vw 1vw;">
 						<b><h3 style = "font-size: 2.8vw; float: right; padding: 2.7vw 0vw 0vw 0vw;">DELETE</h3></b>
 					</div>
 					

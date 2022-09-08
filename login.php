@@ -69,7 +69,7 @@
 					<div class = "logo2">
 						<ul>
 							<li>
-								<a href="login.php"><img src="images/trial2/zetalogo2.png" alt = "Zeta Logo" style = "height: 3.5vw; width: 11.5vw; margin: -1.15vw 0vw 0vw -0.3vw;"></a>
+								<a href="login.php"><img src="images/zetalogo1.png" alt = "Zeta Logo" style = "height: 3.5vw; width: 11.5vw; margin: -1.15vw 0vw 0vw -0.3vw;"></a>
 							</li>
 						</ul>
 					</div>
@@ -81,7 +81,7 @@
 			<div class = "content_1">
 				
 				<!-- header -->
-				<div class = "header" style="background-image: url('images/trial2/loginheader.jpg'); background-size: 71vw 50vw; background-position: 0vw;">
+				<div class = "header" style="background-image: url('images/loginheader.jpg'); background-size: 71vw 50vw; background-position: 0vw;">
 					<b><h1>Magical Moments Start<br>With Music</h1></b>
 				</div>
 				
@@ -89,7 +89,7 @@
 				<div class = "login_box">
 					
 					<div class = "logintext">
-						<img src="images/trial2/usericon3.png" alt = "User Icon 1" style = "height: 6.5vw; width: 6.5vw; background-position: 0vw; margin: 3.8vw 0vw 0vw 1vw;">
+						<img src="images/usericon1.png" alt = "User Icon 1" style = "height: 6.5vw; width: 6.5vw; background-position: 0vw; margin: 3.8vw 0vw 0vw 1vw;">
 						<b><h2 style = "font-size: 3.2vw; float: right; padding: 2.6vw 1.3vw 0vw 0vw;">LOGIN</h2></b>
 					</div>
 					
