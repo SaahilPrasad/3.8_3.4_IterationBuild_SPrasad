@@ -1,6 +1,6 @@
 /* Font Imports */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
 /* Style for overall website */
 html{
@@ -104,7 +104,6 @@ h3 {
 ul li:hover {
 	transform: scale(1.1, 1.1);
 	transition: 0.5s;
-	text-decoration: underline;
 }
 
 a:link{color:#FFFFFF;}
@@ -114,6 +113,31 @@ a:active{color:#FFFFFF;}
 
 a {
 	text-decoration: none;
+}
+
+/* Style for navigation underline effect */
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #fff;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 74.5%;
+  transform: scaleX(0);
+  height: 0.11vw;
+  bottom: 0.8vw;
+  left: 1vw;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 /* Style for content_1, which contains the grid system for the login box and header */
@@ -290,4 +314,3 @@ a {
 	background-color: #242424;
 	/*cursor: pointer;*/
 }
-
