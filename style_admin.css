@@ -1,13 +1,18 @@
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
 /* Style for overall website */
 html{
-  background: black;
+	background: #121416;
+	scroll-behavior: smooth;
 }
 
 /* Style for body */
 body {
-  margin: 0vw;
-  height: 100%; 
-  overflow: hidden;
+	margin: 0vw;
+	height: 100%; 
+	overflow: hidden;
 }
 
 /* Grid system has been created below */
@@ -18,14 +23,135 @@ body {
 	height: 100vh;
 }
 
+/* Style for fonts */
+h1 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 4.3vw;
+	color: #fff;
+}
+
+h3 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 2.5vw;
+	color: #fff;
+}
+
 /* Style for nav (navigation) */
 .nav {
 	box-sizing: border-box;
-	background: #000;
 	opacity: ;
 	grid-column: 1 / span 2;
 	grid-row: 1;
+	display: grid;
+	grid-template-columns: 19vw auto;
+	grid-template-rows: 4.25vw;
 	z-index: 1;
+}
+
+/* Style for logo box/ logo */
+.logo {
+	box-sizing: border-box;
+	background: #121416;
+	opacity: ;
+	grid-column: 1;
+	grid-row: 1;
+	z-index: 1;
+	display: grid;
+	grid-template-columns: 19vw;
+	grid-template-rows: 4.25vw;
+}
+
+/* Style for logo box/ logo */
+.logo2 {
+	box-sizing: border-box;
+	margin-left: 6vw;
+	/*background: #fff;*/
+	opacity: ;
+	grid-column: 1;
+	grid-row: 1;
+	z-index: 1;
+}
+
+.logo2 ul {
+	display: inline;
+	margin: 0vw 0vw 0vw 0vw;
+	list-style: none;
+}
+
+.logo2 ul li {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.2vw;
+	position: absolute;
+	margin-right: 0vw;
+	padding: 1.5vw 1.1vw 1vw 1.1vw;
+	transition: 0.5s;
+}
+
+/* Style for navigation 2 */
+.nav2 {
+	box-sizing: border-box;
+	background: #121416;
+	opacity: ;
+	grid-column: 2;
+	grid-row: 1;
+	z-index: 1;
+}
+
+.nav2 ul {
+	display: inline;
+	margin: 0vw 0vw 0vw 5vw;
+	list-style: none;
+	float: right;
+	margin-right: 6.8vw;
+}
+
+.nav2 ul li {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.2vw;
+	display: inline-block;
+	position: relative;
+	margin-right: 0vw;
+	padding: 1.5vw 1.1vw 1vw 1.1vw;
+	transition: 0.5s;
+}
+
+ul li:hover {
+	transform: scale(1.1, 1.1);
+	transition: 0.5s;
+}
+
+a:link{color:#FFFFFF;}
+a:visited{color:#FFFFFF;}
+a:hover{color:#FFFFFF;}
+a:active{color:#FFFFFF;}
+
+a {
+	text-decoration: none;
+}
+
+/* Style for navigation underline effect */
+.hover-underline-animation {
+	display: inline-block;
+	position: relative;
+	color: #fff;
+}
+
+.hover-underline-animation:after {
+	content: '';
+	position: absolute;
+	width: 74.5%;
+	transform: scaleX(0);
+	height: 0.11vw;
+	bottom: 0.8vw;
+	left: 1vw;
+	background-color: #fff;
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
 }
 
 /* Style for content_1, which contains the grid system for the login box and header */
@@ -37,25 +163,84 @@ body {
 	grid-column: 1 / span 2;
 	grid-row: 2;
 	display: grid;
-	grid-template-columns: 36vw 27.5vw 36vw;
+	grid-template-columns: auto 70.7vw;
 	grid-template-rows: auto;
 	z-index: 1;
 }
 
 /* Style for login box */
 .login_box {
-	background: #ccb0f7;
+	background: #121416;
 	box-sizing: border-box;
-	border-radius: 5%;
 	position: relative;
-	grid-column: 2;
+	grid-column: 1;
 	grid-row: 1;
 	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: 13vw 24.5vw 10.8vw;
+}
+
+/* Style for login text */
+.logintext {
+	box-sizing: border-box;
+	position: relative;
+	margin-left: 4vw;
+	margin-right: 4vw;
+	grid-column: 1;
+	grid-row: 1;
+}
+
+/* Style for login fields */
+.loginfields {
+	box-sizing: border-box;
+	position: relative;
+	margin-left: 4vw;
+	margin-right: 4vw;
+	grid-column: 1;
+	grid-row: 2;
+}
+
+/* Style for text input */
+input[type=text] {
+	padding-left: 0.4vw;
+	padding-right: 0.4vw;
+	background: transparent;
+	border: none;
+  	border-bottom: 0.25vw solid #808080;
+	outline: none;
+	font-size: 1.2vw;
+}
+
+/* Style for password input */
+input[type=password] {
+	padding-left: 0.4vw;
+	padding-right: 0.4vw;
+	background: transparent;
+	border: none;
+  	border-bottom: 0.25vw solid #808080;
+	outline: none;
+	font-size: 1.2vw;
+}
+
+/* Style for submit input */
+input[type=submit] {
+	border: none;
+	outline: none;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.3vw;
+	background-color: #3d99b8;
+	color: #fff;
+}
+
+input[type=submit]:hover {
+	background-color: #66bd76;
+	transition: 0.23s ease-in-out;
+	cursor: pointer;
 }
 
 /* Style for checkbox input */
 input[type=checkbox] {
-	margin: 0.1vw 0vw 0vw 3.8vw;
+	margin: 0.1vw 0vw 0vw 0.4vw;
 	width: 1vw;
 	height: 1vw;
 }
@@ -63,9 +248,83 @@ input[type=checkbox] {
 /* Style for links */
 a {
 	text-decoration: none;
-	color: ;
+	color: #0000ee;
 }
 
 .login_box a:hover {
 	text-decoration: underline;
+}
+
+/* Style for message box */
+.message {
+	box-sizing: border-box;
+	position: relative;
+	margin-left: 4vw;
+	margin-right: 4vw;
+	grid-column: 1;
+	grid-row: 3;
+}
+
+/* Style for header */
+.header {
+	padding: 0.5vw 0vw 0vw 6vw;
+	grid-column: 2;
+	grid-row: 1;
+}
+
+/* Style for admin navigation buttons */
+.btn1 {
+	padding: 0vw 0vw 0vw 0vw;
+	margin-top: 2.7vw;
+	margin-left: 0.5vw;
+	position: absolute;
+	grid-column: 2;
+	grid-row: 1;
+}
+
+.btn2 {
+	padding: 0vw 0vw 0vw 0vw;
+	margin-top: 2.7vw;
+	position: absolute;
+	margin-left: 13.1vw;
+	grid-column: 2;
+	grid-row: 1;
+}
+
+.btn3 {
+	padding: 0vw 0vw 0vw 0vw;
+	margin-top: 2.7vw;
+	position: absolute;
+	margin-left: 25.6vw;
+	grid-column: 2;
+	grid-row: 1;
+}
+
+.btn4 {
+	padding: 0vw 0vw 0vw 0vw;
+	margin-top: 2.7vw;
+	position: absolute;
+	margin-left: 38.2vw;
+	grid-column: 2;
+	grid-row: 1;
+}
+
+/* Style for content_2 */
+.content_2 {
+	font-family: 'Roboto', sans-serif; 
+	color: #fff;
+	overflow-y: auto;
+	margin: 22.7vw 14vw 0vw 6.5vw;
+	grid-column: 2;
+	grid-row: 1;
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: 2vw;
+	position: relative;
+	/*z-index: -1;*/
+}
+
+.query_rows:hover {
+	background-color: #242424;
+	/*cursor: pointer;*/
 }
