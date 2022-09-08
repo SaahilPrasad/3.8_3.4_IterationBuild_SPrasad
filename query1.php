@@ -16,6 +16,9 @@
 <html lang="en">
 	
 	<head>
+		<!-- Favicon (Zeta icon), which will be displayed on browser tabs -->
+		<link rel="icon" type="image/x-icon" href="images/zetafavicon1.png">
+		
 		<!-- Title, which will be displayed on browser tabs -->
 		<title>ZetaMusic | Query One</title>
 		
@@ -54,7 +57,7 @@
 					<div class = "logo2">
 						<ul>
 							<li>
-								<a href="index.php"><img src="images/zetalogo1.png" alt = "Zeta Logo" style = "height: 3.5vw; width: 11.5vw; margin: -1.15vw 0vw 0vw -0.3vw;"></a>
+								<a href="index.php"><img src="images/officialzetalogo.png" alt = "Zeta Logo" style = "height: 3.3vw; width: 13.3vw; margin-top: -0.95vw;"></a>
 							</li>
 						</ul>
 					</div>
@@ -102,7 +105,7 @@
 				
 				<center><form action="search.php" method="post">
 					<input type="text" autocomplete="off" class="search" style = "font-family: 'Roboto', sans-serif; font-size: 1vw;" placeholder="Search For Music..." name="search">
-					<button class="button" type="submit"><img src="images/searchicon1.png" alt = "Search Icon" style = "height: 2.3vw; width: 2.3vw; margin-top: -1.5vw; margin-left: -1.2vw; position: absolute;"></button>
+					<button class="button" type="submit"><img src="images/searchicon12.png" alt = "Search Icon" style = "height: 2.3vw; width: 2.3vw; margin-top: -1.5vw; margin-left: -1.2vw; position: absolute;"></button>
 				</form></center>
 			
 			</div>
@@ -113,7 +116,15 @@
 
 				$total_time = ("SELECT SEC_TO_TIME(SUM(s.Duration)) AS 'Total Duration' 
 					
-				FROM song_details AS s");
+				FROM song_details AS s
+				
+				INNER JOIN album a ON s.Album_PK = a.Album_PK
+
+				JOIN title_to_artist j ON s.Title_PK = j.Title_PK
+				JOIN artist b ON b.Artist_PK = j.Artist_PK
+
+				JOIN title_to_genre k ON s.Title_PK = k.Title_PK
+				JOIN genre c ON c.Genre_PK = k.Genre_PK");
 					
 				//Runs and stores the query using the varibales $conn (see nav.php) and $query
 				$result = mysqli_query($conn,$total_time);

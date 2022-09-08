@@ -36,6 +36,9 @@
 <html lang="en">
 	
 	<head>
+		<!-- Favicon (Zeta icon), which will be displayed on browser tabs -->
+		<link rel="icon" type="image/x-icon" href="images/zetafavicon1.png">
+		
 		<!-- Title, which will be displayed on browser tabs -->
 		<title>ZetaMusic | Login</title>
 		
@@ -69,7 +72,7 @@
 					<div class = "logo2">
 						<ul>
 							<li>
-								<a href="login.php"><img src="images/zetalogo1.png" alt = "Zeta Logo" style = "height: 3.5vw; width: 11.5vw; margin: -1.15vw 0vw 0vw -0.3vw;"></a>
+								<a href="login.php"><img src="images/officialzetalogo.png" alt = "Zeta Logo" style = "height: 3.3vw; width: 13.3vw; margin-top: -0.95vw;"></a>
 							</li>
 						</ul>
 					</div>

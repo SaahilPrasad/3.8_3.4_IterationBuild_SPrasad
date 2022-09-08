@@ -33,7 +33,7 @@ h3 {
 	grid-column: 1 / span 2;
 	grid-row: 1;
 	display: grid;
-	grid-template-columns: 19vw auto;
+	grid-template-columns: 17vw auto;
 	grid-template-rows: 4.25vw auto;
 }
 
@@ -58,19 +58,19 @@ h3 {
 	grid-row: 1;
 	z-index: 1;
 	display: grid;
-	grid-template-columns: 19vw;
+	grid-template-columns: 17vw;
 	grid-template-rows: 4.25vw;
 }
 
 /* Style for logo box/ logo */
 .logo2 {
 	box-sizing: border-box;
-	margin-left: 6vw;
-	background: #fff;
+	text-align: center;
+	background: #121416;
 	opacity: ;
 	grid-column: 1;
 	grid-row: 1;
-	z-index: 1;
+	z-index: 99;
 }
 
 .logo2 ul {
@@ -83,8 +83,7 @@ h3 {
 	font-family: 'Roboto', sans-serif;
 	font-size: 1.2vw;
 	position: absolute;
-	margin-right: 0vw;
-	padding: 1.5vw 1.1vw 1vw 1.1vw;
+	margin: 1.5vw 1.1vw 1vw 3.2vw;
 	transition: 0.5s;
 }
 

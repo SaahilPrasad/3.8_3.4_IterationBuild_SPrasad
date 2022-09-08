@@ -16,6 +16,9 @@
 <html lang="en">
 	
 	<head>
+		<!-- Favicon (Zeta icon), which will be displayed on browser tabs -->
+		<link rel="icon" type="image/x-icon" href="images/zetafavicon1.png">
+		
 		<!-- Title, which will be displayed on browser tabs -->
 		<title>ZetaMusic | Home</title>
 		
@@ -40,7 +43,7 @@
 	
 		<!-- grid-container class which contains all content using CSS grid -->
 		<div class="grid-container">
-
+			
 			<!-- header class which consists of the header image, text logo and navigation system -->
 			<div class="header" style="background-image: url('images/mainheader.jpg'); background-size: 100vw 55vw; background-position: 0vw;">
 				
@@ -54,7 +57,7 @@
 					<div class = "logo2">
 						<ul>
 							<li>
-								<a href="index.php"><img src="images/zetalogo1.png" alt = "Zeta Logo" style = "height: 3.5vw; width: 11.5vw; margin: -1.15vw 0vw 0vw -0.3vw;"></a>
+								<a href="index.php"><img src="images/officialzetalogo.png" alt = "Zeta Logo" style = "height: 3.3vw; width: 13.3vw; margin-top: -0.95vw;"></a>
 							</li>
 						</ul>
 					</div>
@@ -104,7 +107,7 @@
 				
 				<center><form action="search.php" method="post">
 					<input type="text" autocomplete="off" class="search" style = "border: 0.25vw solid #fff; font-family: 'Roboto', sans-serif;" placeholder="Search For Music..." name="search">
-					<button class="button" type="submit"><img src="images/searchicon1.png" alt = "Search Icon" style = "height: 2.6vw; width: 2.6vw; margin-top: -1.75vw; margin-left: -1.2vw; position: absolute;"></button>
+					<button class="button" type="submit"><img src="images/searchicon12.png" alt = "Search Icon" style = "height: 2.6vw; width: 2.6vw; margin-top: -1.75vw; margin-left: -1.2vw; position: absolute;"></button>
 				</form></center>
 			
 			</div>
@@ -189,7 +192,7 @@
 					<div class = "playlist4" style = "overflow: hidden; transition: 0.6s; cursor: pointer;">
 						<a href="studying.php"><img src="images/playlist4.jpg" alt = "Playlist 4 - Studying Tunes" style = "width: 15vw; height: 12vw;">
 						<div class="overlay">
-							<div class="text" style = "margin-top: 10vw; margin-left: 5.4vw;">Studying Tunes</div>
+							<div class="text" style = "margin-top: 10vw; margin-left: 5.4vw;">Study Tunes</div>
 						</div></a>
 					</div>
 
