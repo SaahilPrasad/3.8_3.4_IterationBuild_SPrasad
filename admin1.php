@@ -33,29 +33,27 @@
 			
 			<!-- login box -->
 			<div class = "login_box">
-			
-				<b><p style = "color: black; font-size: 2vw; margin: 5.5vw 0vw 0vw 3.7vw;">Add User</p></b>
-
+				
+				<b><p style = "color: black; font-size: 2vw; margin: 1vw 0vw 0vw 1vw;">Add User</p></b>
+				
 				<!-- Form for input fields -->
 				<h3><form method = "post" id= "01_login">
-
-					<p style = "margin: -2.3vw 0vw 0vw 3.7vw; font-size: 1.4vw;">Username:</p>
-					<input style = "width: 18.8vw; height: 1.9vw; margin: 1vw 2vw 0vw 3.7vw; font-size: 1.2vw;" type = "text" name = "username" placeholder="Your Username..."/>
-
-					<p style = "margin: 1.5vw 0vw 0vw 3.7vw; font-size: 1.4vw;">Password:</p>
-					<input style = "width: 18.8vw; height: 1.9vw; margin: 1vw 2vw 0vw 3.7vw; font-size: 1.2vw;" type = "password" name = "password" placeholder="Your Password..." id="myInput"/>
 						
-					<p style = "margin: 1.3vw 0vw -1.3vw 5.3vw; font-size: 1vw;">Show Password</p>
-					
+					<input style = "width: 18.8vw; height: 1.9vw; margin: 4vw 0vw 0vw 4.2vw;" type = "text" name = "username" placeholder="Username..."/>
+						
+					<input style = "width: 18.8vw; height: 1.9vw; margin: 3.05vw 0vw 0vw 4.2vw;" type = "password" name = "password" placeholder="Password..." id="myInput"/>
+						
+					<p style = "margin: 1.4vw 0vw -1.2vw 5.7vw; font-size: 1vw;">Show Password</p>
+						
 					<!-- Checkbox for password visibility -->
 					<input type="checkbox" onclick="myFunction()"/>
-
-					<input style = "width: 19.2vw; height: 2.5vw; margin: 2.8vw 2vw 0vw 3.7vw; font-size: 1.2vw;" type = "submit" name = "submit" value = "Add User"/>
-				
+						
+					<input style = "width: 19.6vw; height: 2.5vw; margin: 4.4vw 0vw 0vw 4.2vw;" type = "submit" value = "Add User"/>
+					
 				</form></h3>
 					
-				<center><p style = "margin: -5.8vw 0vw 0vw 0vw; font-size: 1vw; visibility: hidden;">Return Back To<a href = "login.php"> Login</a></p></center>
-
+				<center><p style = "margin: -6.5vw 0vw 0vw 0vw; font-size: 1vw; visibility: hidden;">Need An Account?<a href = "register.html"> Register</a></p></center>
+					
 			</div>
 
 			<!-- content_1 to hold header, and content_2 -->
