@@ -77,7 +77,7 @@
 			<div class = "content_1">
 				
 				<!-- header -->
-				<div class = "header">
+				<div class = "header" style="background-image: url('images/header.jpg'); background-size: 100vw 50vw; background-position: 0vw;">
 					<b><h1>Magical Moments Start<br>With Music</h1></b>
 				</div>
 				
@@ -113,7 +113,7 @@
 					
 					<!-- message class, which contains the error and success message output -->		
 					<div class = "message">
-						<center><p style = "color: #ff6161; margin: 0.7vw 0vw 0vw 0vw; font-family: 'Roboto', sans-serif; font-size: 1vw;"><?php echo $error; ?></p></center>
+						<center><p style = "color: #dc323e; margin: 0.7vw 0vw 0vw 0vw; font-family: 'Roboto', sans-serif; font-size: 1vw;"><?php echo $error; ?></p></center>
 					</div>
 					
 				</div>

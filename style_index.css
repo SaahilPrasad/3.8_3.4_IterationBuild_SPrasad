@@ -1,6 +1,6 @@
 /* Font Imports */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
 /* Style for overall website */
 html{
@@ -40,7 +40,7 @@ h3 {
 }
 
 p {
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Noto Sans', sans-serif;
 	font-size: 1.2vw;
 	color: #fff;
 }
@@ -65,6 +65,7 @@ p {
 
 /* Style for header text */
 .headertext2 {
+	padding-top: 2vw;
 	background-color: transparent;
 	width: 19.9vw;
 	margin-left: 6vw;
@@ -72,9 +73,20 @@ p {
 	grid-row: 3;
 }
 
-.headertext2 a:hover {
-	text-decoration: underline;
+/* Style for submit input */
+input[type=submit] {
+	border: 0.2vw solid #fff;
+	border-radius: 2vw;
+	outline: none;
+	font-family: 'Roboto', sans-serif;
+	background-color: transparent;
 	color: #fff;
+}
+
+input[type=submit]:hover {
+	background-color: #121416;
+	transition: 0.23s ease-in-out;
+	cursor: pointer;
 }
 
 /* Style for logo box/ logo */
@@ -133,7 +145,6 @@ p {
 ul li:hover {
 	transform: scale(1.1, 1.1);
 	transition: 0.5s;
-	text-decoration: underline;
 }
 
 a:link{color:#FFFFFF;}
@@ -143,6 +154,31 @@ a:active{color:#FFFFFF;}
 
 a {
 	text-decoration: none;
+}
+
+/* Style for navigation underline effect */
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #fff;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 74.5%;
+  transform: scaleX(0);
+  height: 0.11vw;
+  bottom: 0.8vw;
+  left: 1vw;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 /* Style for search content - search system*/
@@ -337,9 +373,8 @@ input[type=text] {
 
 /* Style for promotion_header for Graeme's two playlists */
 .promotion_header {
-	/*background: rgb(61,153,184);
-	background: linear-gradient(10deg, rgba(61,153,184,1) 0%, rgba(162,198,240,1) 100%);*/
-	background: #3d99b8;
+	background: rgb(54,122,191);
+	background: linear-gradient(90deg, rgba(54,122,191,1) 0%, rgba(162,204,246,1) 100%);
 	opacity: ;
 	grid-column: 1 / span 2;
 	grid-row: 6;
@@ -364,7 +399,8 @@ input[type=text] {
 
 .promotiontext3{
 	background: transparent;
-	padding-top: 13.7vw;
+	padding-top: 13.35vw;
+	padding-left: 2.5vw;
 	grid-column: 3;
 	grid-row: 1;
 }

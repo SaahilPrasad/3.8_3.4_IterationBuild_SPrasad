@@ -59,19 +59,19 @@
 				<!-- nav 2 containing the navigation links -->
 				<div class="nav2" style="top: 0vw; position: sticky;">
 					<ul>
-						<li style="margin-left: 0vw; margin-right: 0vw;"><a href="query1.php">Query One</a></li>
-						<li><a href="query2.php">Query Two</a></li>
+						<li class ="hover-underline-animation" style="margin-left: 0vw; margin-right: 0vw;"><a href="query1.php">Query One</a></li>
+						<li class ="hover-underline-animation"><a href="query2.php">Query Two</a></li>
 
 						<!-- Determines if the user is a standard user or admin (Graeme) and will output the navigation links with respect to this -->
 						<?php
 							if ($_SESSION['login_user'] == "Graeme" or $_SESSION['login_user'] == "graeme"){
-								echo "<li><a href='admin1.php'>Settings</a></li>";
+								echo "<li class ='hover-underline-animation'><a href='admin1.php'>Settings</a></li>";
 							}
 						?>
 						
 						<li style = "color: white;">|</li>
 						<li style = "color: white;"><?php echo $_SESSION['login_user'];?></li>
-						<li style = "margin-right: 0vw;"><a href="signout.php">Sign Out</a></li>
+						<li class ="hover-underline-animation" style = "margin-right: 0vw;"><a href="signout.php">Sign Out</a></li>
 					</ul>
 				</div>
 				
@@ -152,9 +152,9 @@
 								$updatequery = "UPDATE user_details SET Username = '$NewUN' WHERE Username = '$ExistingUN'";
 
 								if (mysqli_query($conn,$updatequery)){
-									echo "<center><p style = 'color: #66bd76; margin: 0.7vw 0vw 0vw 0vw; font-family: Roboto, sans-serif; font-size: 1vw;'>Username Successfully Updated</p></center>";
+									echo "<center><p style = 'color: #1eae6b; margin: 0.7vw 0vw 0vw 0vw; font-family: Roboto, sans-serif; font-size: 1vw;'>Username Successfully Updated</p></center>";
 								} else{
-									echo "<center><p style = 'color: #ff6161; margin: 0.7vw 0vw 0vw 0vw; font-family: Roboto, sans-serif; font-size: 1vw;'>Invalid Credentials, Please Try Again</p></center>";
+									echo "<center><p style = 'color: #ff6161#dc323e; margin: 0.7vw 0vw 0vw 0vw; font-family: Roboto, sans-serif; font-size: 1vw;'>Invalid Credentials, Please Try Again</p></center>";
 								}
 							}
 

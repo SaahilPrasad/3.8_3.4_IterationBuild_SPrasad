@@ -42,7 +42,7 @@
 		<div class="grid-container">
 			
 			<!-- header class which consists of the header image, text logo and navigation system -->
-			<div class="header" style="background-image: url('images/header2.jpg'); background-size: 100vw 55vw;">
+			<div class="header">
 				
 				<?php
 				if(session_id() == ''){session_start();}
@@ -59,19 +59,19 @@
 				<!-- navigation located at the very top -->
 				<div class="nav" style="top: 0vw; position: sticky;">
 					<ul>
-						<li style="margin-left: 0vw; margin-right: 0vw;"><a href="query1.php">Query One</a></li>
-						<li><a href="query2.php">Query Two</a></li>
+						<li class ="hover-underline-animation" style="margin-left: 0vw; margin-right: 0vw;"><a href="query1.php">Query One</a></li>
+						<li class ="hover-underline-animation"><a href="query2.php">Query Two</a></li>
 
 						<!-- Determines if the user is a standard user or admin (Graeme) and will output the navigation links with respect to this -->
 						<?php
 							if ($_SESSION['login_user'] == "Graeme" or $_SESSION['login_user'] == "graeme"){
-								echo "<li><a href='admin1.php'>Settings</a></li>";
+								echo "<li class ='hover-underline-animation'><a href='admin1.php'>Settings</a></li>";
 							}
 						?>
 						
 						<li style = "color: white;">|</li>
 						<li style = "color: white;"><?php echo $_SESSION['login_user'];?></li>
-						<li style = "margin-right: 0vw;"><a href="signout.php">Sign Out</a></li>
+						<li class ="hover-underline-animation" style = "margin-right: 0vw;"><a href="signout.php">Sign Out</a></li>
 					</ul>
 				</div>
 				
@@ -81,7 +81,7 @@
 				</div>
 				
 				<div class = "headertext2">
-					<a href="index.php#search_content"><h2>Browse Now</h2></a>
+					<form action="index.php#search_content"><input style = "font-size: 2.5vw; width: 21vw; height: 3.7vw; margin: 0vw 0vw 0vw 0vw;" type = "submit" value = "Browse Now"/></form>
 				</div>
 				
 			</div>
@@ -166,22 +166,22 @@
 			
 			</div>
 			
-			<!-- promotion_header class to promote/ advertise Graeme's two playlists (Query One, Query Two) MAKE GRID SYSTEM FOR THIS-->
+			<!-- promotion_header class to promote/ advertise Graeme's two playlists (Query One, Query Two) -->
 			<div class = "promotion_header">
 				<div class = "promotiontext1">
 					<h2 style = "font-size: 3.7vw; padding: 2vw 0vw 0vw 6vw;">Check Out Graeme's<br>Playlists!</h2>
 				</div>
 				
 				<div class = "promotiontext2">
-					<a href="query1.php"><h3 style = "margin-top: 0vw; color: #fff;">Party All Day</h3></a>
+					<form action="query1.php"><input style = "font-size: 2vw; width: 18vw; height: 3.5vw; margin: 0vw 0vw 0vw 0vw;" type = "submit" value = "Party All Day"/></form>
 				</div>
 				
 				<div class = "promotiontext3">
-					<center><h3 style = "margin-top: 0vw; color: #fff;">|</h3></center>
+					<center><h3 style = "font-size: 3.3vw; margin-top: 0vw; color: #fff;">|</h3></center>
 				</div>
 				
 				<div class = "promotiontext4">
-					<a href="query2.php"><h3 style = "margin-top: 0vw; color: #fff;">Party All Night</h3></a>
+					<form action="query2.php"><input style = "font-size: 2vw; width: 18vw; height: 3.5vw; margin: 0vw 0vw 0vw 0vw;" type = "submit" value = "Party All Night"/></form>
 				</div>
 			</div>
 			
@@ -189,7 +189,7 @@
 			<div class = "footer">
 				<h3 style = "margin-top: 2.5vw; margin-left: 6vw;">Note</h3>
 				<p style = "font-size: 1.1vw; margin-top: -3.5vw; margin-left: 6vw;">All Album Covers Have Been Sourced From Spotify.<br>Other Images Have Been Sourced From Creative Commons.</p>
-				<p style = "font-size: 1.1vw; margin-top: -1.2vw; margin-left: 6vw;">&copy Copyright Saahil Prasad 2022, All Rights Reserved.</p>
+				<b><p style = "font-size: 1.1vw; margin-top: -1.2vw; margin-left: 6vw;">&copy Copyright Saahil Prasad 2022, All Rights Reserved.</p></b>
 			</div>
 			
 		</div>
