@@ -12,7 +12,7 @@ body {
 .grid-container {
 	display: grid;
 	grid-template-columns: auto;
-	grid-template-rows: 27vw 7vw 3vw 50vw 0vw 13vw;
+	grid-template-rows: 25vw 7vw 3vw 50vw 0vw 14.5vw;
 }
 
 /* Style for header, which contains the grid system for the navigation bar */
@@ -40,7 +40,7 @@ body {
 	background: #ffb282;
 	opacity: ;
 	font-size: 1.1vw;
-	margin: 0vw 0vw 0vw 0vw;
+	margin: 0vw 6.2vw 0vw 6.2vw;
 	grid-column: 1 / span 2;
 	grid-row: 2;
 	display: grid;
@@ -49,16 +49,27 @@ body {
 
 /* Style for text input */
 input[type=text] {
+	width: 45vw;
+	height: 2.3vw;
+	margin: 2.5vw 0vw 0vw 0vw;
   	border: none;
 	outline: none;
-	font-size: 1.2vw;
+	font-size: 1.1vw;
+	padding-left: 0.8vw;
+	padding-right: 0.8vw;
+	padding-top: 0.17vw;
 }
 
 /* Style for submit button */
 .button {
+	height: 2.498vw;
+	width: 7vw;
   	border: none;
 	outline: none;
-	font-size: 1.2vw;
+	font-size: 1.1vw;
+	padding-left: 0.8vw;
+	padding-right: 0.8vw;
+	padding-top: 0.17vw;
 }
 
 .button:hover {
@@ -73,7 +84,7 @@ input[type=text] {
 	background: #ccb0f7;
 	opacity: ;
 	font-size: 1.1vw;
-	margin: 0vw 0vw 0vw 0vw;
+	margin: 0vw 6.2vw 0vw 6.2vw;
 	grid-column: 1 / span 2;
 	grid-row: 3;
 	display: grid;
@@ -85,7 +96,7 @@ input[type=text] {
 	background: white;
 	opacity: ;
 	font-size: 1.1vw;
-	margin: 0vw 0vw 0vw 0vw;
+	margin: 0vw 6.2vw 0vw 6.2vw;
 	grid-column: 1 / span 2;
 	grid-row: 4;
 	display: grid;
