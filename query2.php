@@ -59,19 +59,19 @@
 				<!-- navigation located at the very top -->		
 				<div class="nav" style="top: 0vw; position: sticky;">
 					<ul>
-						<li style="margin-left: 0vw; margin-right: 0vw;"><a href="query1.php">Query One</a></li>
-						<li><a href="query2.php">Query Two</a></li>
+						<li class ="hover-underline-animation" style="margin-left: 0vw; margin-right: 0vw;"><a href="query1.php">Query One</a></li>
+						<li class ="hover-underline-animation"><a href="query2.php">Query Two</a></li>
 						
 						<!-- Determines if the user is a standard user or admin (Graeme) and will output the navigation links with respect to this -->
 						<?php
 							if ($_SESSION['login_user'] == "Graeme" or $_SESSION['login_user'] == "graeme"){
-								echo "<li><a href='admin1.php'>Settings</a></li>";
+								echo "<li class ='hover-underline-animation'><a href='admin1.php'>Settings</a></li>";
 							}
 						?>
 						
 						<li style = "color: white;">|</li>
 						<li style = "color: white;"><?php echo $_SESSION['login_user'];?></li>
-						<li style = "margin-right: 0vw;"><a href="signout.php">Sign Out</a></li>
+						<li class ="hover-underline-animation" style = "margin-right: 0vw;"><a href="signout.php">Sign Out</a></li>
 					</ul>
 				</div>
 				
@@ -239,9 +239,10 @@
 			<!-- footer class to display legal message - sources and copyright statement -->
 			<div class = "footer">
 				<h3 style = "margin-top: 2.5vw; margin-left: 6vw;">Note</h3>
-				<p style = "font-family: 'Poppins', sans-serif; font-size: 1.1vw; color: #fff; margin-top: -3.5vw; margin-left: 6vw;">All Album Covers Have Been Sourced From Spotify.<br>Other Images Have Been Sourced From Creative Commons.</p>
-				<p style = "font-family: 'Poppins', sans-serif; font-size: 1.1vw; color: #fff; margin-top: -1.2vw; margin-left: 6vw;">&copy Copyright Saahil Prasad 2022, All Rights Reserved.</p>
+				<p style = "font-family: 'Noto Sans', sans-serif; font-size: 1.1vw; color: #fff; margin-top: -3.5vw; margin-left: 6vw;">All Album Covers Have Been Sourced From Spotify.<br>Other Images Have Been Sourced From Creative Commons.</p>
+				<b><p style = "font-family: 'Noto Sans', sans-serif; font-size: 1.1vw; color: #fff; margin-top: -1.2vw; margin-left: 6vw;">&copy Copyright Saahil Prasad 2022, All Rights Reserved.</p></b>
 			</div>
+		
 		</div>
 							
 	</body>
