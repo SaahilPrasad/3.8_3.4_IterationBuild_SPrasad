@@ -25,14 +25,17 @@
 	
 		<!-- grid-container class which contains all content using CSS grid -->
 		<div class="grid-container">
-		
-			<div class="nav1">
-				<b><p style = "color: white; font-size: 2vw; margin: 1vw 0vw 0vw 1vw;">Navigation</p></b>
-			</div>
 			
-			<!-- header class which consists of the header image, text -->
+			<!-- header class which consists of the header image, text and navigation system -->
 			<div class="header" style="background-image: url('images/header2.jpg'); background-size: 100vw 55vw;">
+				
 				<b><p style = "color: black; font-size: 2vw; margin: 1vw 0vw 0vw 1vw;">Header</p></b>
+				
+				<!-- navigation located at the very top -->				
+				<div class="nav" style = "top: 0vw; position: sticky;">
+					<b><p style = "color: white; font-size: 2vw; margin: 1vw 0vw 0vw 1vw;">Navigation</p></b>
+				</div>
+			
 			</div>
 			
 			<!-- Creates space between contents via CSS grid -->			
@@ -60,6 +63,10 @@
 					<div class = "genre4">
 						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Genre 4</p></b>
 					</div>
+					
+					<div class = "genre5">
+						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Genre 5</p></b>
+					</div>
 
 				</div>
 				
@@ -80,6 +87,10 @@
 					
 					<div class = "song4">
 						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Song 4</p></b>
+					</div>
+					
+					<div class = "song5">
+						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Song 5</p></b>
 					</div>
 				
 				</div>
@@ -102,9 +113,18 @@
 					<div class = "artist4">
 						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Artist 4</p></b>
 					</div>
+					
+					<div class = "artist5">
+						<b><p style = "color: black; font-size: 2vw; margin: 4vw 0vw 0vw 2vw;">Artist 5</p></b>
+					</div>
 				
 				</div>
 			
+			</div>
+			
+			<!-- promotion_header class to promote/ advertise Graeme's two playlists (Query One, Query Two) -->
+			<div class = "promotion_header">
+				<b><p style = "color: black; font-size: 2vw; margin: 1vw 0vw 0vw 1vw;">Promotion Header</p></b>
 			</div>
 			
 			<!-- footer class to display legal message - sources and copyright statement -->
