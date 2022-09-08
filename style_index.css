@@ -12,7 +12,7 @@ body {
 .grid-container {
 	display: grid;
 	grid-template-columns: auto;
-	grid-template-rows: 53vw 8.2vw 65vw 30vw 13vw;
+	grid-template-rows: 53vw 14vw 8vw 44vw 32vw 14.5vw;
 }
 
 /* Style for header, which contains the grid system for the navigation bar */
@@ -36,26 +36,70 @@ body {
 	z-index: 1;
 }
 
+/* Style for search content - search system*/
+.search_content {
+	background: #ffb282;
+	opacity: ;
+	margin: 0vw 0vw 0vw 0vw;
+	padding: 3.7vw 0vw 0vw 0vw;
+	grid-column: 1 / span 2;
+	grid-row: 2;
+	z-index: 2;
+}
+
+/* Style for text input */
+input[type=text] {
+	width: 49vw;
+	height: 2.9vw;
+	margin: 3.4vw 0vw 0vw 0vw;
+  	border: none;
+	outline: none;
+	font-size: 1.1vw;
+	padding-left: 0.8vw;
+	padding-right: 0.8vw;
+	padding-top: 0.17vw;
+}
+
+
+/* Style for submit button */
+.button {
+	height: 3.21vw;
+	width: 6.5vw;
+  	border: none;
+	outline: none;
+	font-size: 1.1vw;
+	padding-left: 0.8vw;
+	padding-right: 0.8vw;
+	padding-top: 0.17vw;
+}
+
+.button:hover {
+	background-color: #424242;
+	transition: 0.23s ease-in-out;
+	cursor: pointer;
+}
+
 /* Style for space_1, which creates space between contents */
 .space_1 {
 	background: #fff;
 	opacity: ;
 	grid-column: 1 / span 2;
-	grid-row: 2;
+	grid-row: 3;
 	z-index: 2;
 }
+
 
 /* Style for content_1, which contains the grid system for the genre, song and artist covers' classes */
 .content_1 {
 	background: #fff;
 	opacity: ;
 	font-size: 1.1vw;
-	margin: 0vw 15vw 0vw 15vw;
+	margin: 0vw 16vw 0vw 16vw;
 	grid-column: 1 / span 2;
-	grid-row: 3;
+	grid-row: 4;
 	display: grid;
 	grid-template-columns: auto;
-	grid-template-rows: 20.5vw 20.5vw 20.5vw;
+	grid-template-rows: 20.5vw 0.7vw 20.5vw;
 	z-index: 1;
 }
 
@@ -68,8 +112,8 @@ body {
 	grid-column: 1;
 	grid-row: 1;
 	display: grid;
-	grid-template-columns: 0.5fr 2.1vw 0.5fr 2.1vw 0.5fr 2.1vw 0.5fr 2.1vw 0.5fr;
-	grid-template-rows: 11.8vw;
+	grid-template-columns: 0.5fr 2.8vw 0.5fr 2.8vw 0.5fr 2.8vw 0.5fr;
+	grid-template-rows: 11.2vw;
 	z-index: 1;
 }
 
@@ -109,15 +153,6 @@ body {
 	z-index: 1;
 }
 
-.genre5 {
-	box-sizing: border-box;
-	background: #ffb282;
-	opacity: ;
-	grid-column: 9;
-	grid-row: 1;
-	z-index: 1;
-}
-
 /* Style for content_song, which contains the grid system to hold the song covers/ images */
 .content_song {
 	background: #fff;
@@ -125,10 +160,10 @@ body {
 	font-size: 1.1vw;
 	margin: 2vw 0vw 0vw 0vw;
 	grid-column: 1;
-	grid-row: 2;
+	grid-row: 3;
 	display: grid;
-	grid-template-columns: 0.5fr 2.1vw 0.5fr 2.1vw 0.5fr 2.1vw 0.5fr 2.1vw 0.5fr;
-	grid-template-rows: 11.8vw;
+	grid-template-columns: 0.5fr 2.8vw 0.5fr 2.8vw 0.5fr 2.8vw 0.5fr;
+	grid-template-rows: 11.2vw;
 	z-index: 1;
 }
 
@@ -168,79 +203,6 @@ body {
 	z-index: 1;
 }
 
-.song5 {
-	box-sizing: border-box;
-	background: #ffb282;
-	opacity: ;
-	grid-column: 9;
-	grid-row: 1;
-	z-index: 1;
-}
-
-/* Style for content_artist, which contains the grid system to hold the artist covers/ images */
-.content_artist {
-	background: #fff;
-	opacity: ;
-	font-size: 1.1vw;
-	margin: 2vw 0vw 0vw 0vw;
-	grid-column: 1;
-	grid-row: 3;
-	display: grid;
-	grid-template-columns: 0.5fr 2.1vw 0.5fr 2.1vw 0.5fr 2.1vw 0.5fr 2.1vw 0.5fr;
-	grid-template-rows: 11.8vw;
-	z-index: 1;
-}
-
-.artist1 {
-	box-sizing: border-box;
-	background: #ffb282;
-	opacity: ;
-	border-radius: 50%;
-	grid-column: 1;
-	grid-row: 1;
-	z-index: 1;
-}
-
-.artist2 {
-	box-sizing: border-box;
-	background: #ffb282;
-	opacity: ;
-	border-radius: 50%;
-	grid-column: 3;
-	grid-row: 1;
-	z-index: 1;
-}
-
-.artist3 {
-	box-sizing: border-box;
-	background: #ffb282;
-	opacity: ;
-	border-radius: 50%;
-	grid-column: 5;
-	grid-row: 1;
-	z-index: 1;
-}
-
-.artist4 {
-	box-sizing: border-box;
-	background: #ffb282;
-	opacity: ;
-	border-radius: 50%;
-	grid-column: 7;
-	grid-row: 1;
-	z-index: 1;
-}
-
-.artist5 {
-	box-sizing: border-box;
-	background: #ffb282;
-	opacity: ;
-	border-radius: 50%;
-	grid-column: 9;
-	grid-row: 1;
-	z-index: 1;
-}
-
 /* Style for promotion_header for Graeme's two playlists */
 .promotion_header {
 	background: #ccb0f7;
@@ -248,7 +210,7 @@ body {
 	font-size: 1.1vw;
 	margin: 0vw 0vw 0vw 0vw;
 	grid-column: 1 / span 2;
-	grid-row: 4;
+	grid-row: 5;
 	display: grid;
 	z-index: 1;
 }
@@ -260,7 +222,7 @@ body {
 	font-size: 1.1vw;
 	margin: 0vw 0vw 0vw 0vw;
 	grid-column: 1 / span 2;
-	grid-row: 5;
+	grid-row: 6;
 	display: grid;
 	z-index: 1;
 }

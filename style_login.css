@@ -37,7 +37,7 @@ body {
 	grid-column: 1 / span 2;
 	grid-row: 2;
 	display: grid;
-	grid-template-columns: auto 72.5vw;
+	grid-template-columns: auto 71.5vw;
 	grid-template-rows: auto;
 	z-index: 1;
 }
@@ -54,14 +54,22 @@ body {
 
 /* Style for text input */
 input[type=text] {
-  	border: none;
+	padding-left: 0.4vw;
+	padding-right: 0.4vw;
+	background: transparent;
+	border: none;
+  	border-bottom: 0.25vw solid #000;
 	outline: none;
 	font-size: 1.2vw;
 }
 
 /* Style for password input */
 input[type=password] {
-  	border: none;
+	padding-left: 0.4vw;
+	padding-right: 0.4vw;
+	background: transparent;
+	border: none;
+  	border-bottom: 0.25vw solid #000;
 	outline: none;
 	font-size: 1.2vw;
 }
@@ -70,7 +78,6 @@ input[type=password] {
 input[type=submit] {
 	border: none;
 	outline: none;
-	border-radius: 2vw;
 	font-size: 1.2vw;
 }
 
@@ -82,7 +89,7 @@ input[type=submit]:hover {
 
 /* Style for checkbox input */
 input[type=checkbox] {
-	margin: 0.1vw 0vw 0vw 3.8vw;
+	margin: 0.1vw 0vw 0vw 4.2vw;
 	width: 1vw;
 	height: 1vw;
 }

@@ -34,22 +34,25 @@
 			<!-- login box -->
 			<div class = "login_box">
 
-				<b><p style = "color: black; font-size: 2vw; margin: 5.5vw 0vw 0vw 3.7vw;">Update Username</p></b>
+				<b><p style = "color: black; font-size: 2vw; margin: 1vw 0vw 0vw 1vw;">Update Username</p></b>
 
 				<!-- Form for input fields -->
 				<h3><form method = "post" id= "01_login">
 
-					<p style = "margin: -2.3vw 0vw 0vw 3.7vw; font-size: 1.4vw;">Existing Username:</p>
-					<input style = "width: 18.8vw; height: 1.9vw; margin: 1vw 2vw 0vw 3.7vw; font-size: 1.2vw;" type = "text" name = "ExistingUserName" placeholder="Your Existing Username..."/>
+					<input style = "width: 18.8vw; height: 1.9vw; margin: 4vw 0vw 0vw 4.2vw;" type = "text" name = "username" placeholder="Existing Username..."/>
 
-					<p style = "margin: 1.5vw 0vw 0vw 3.7vw; font-size: 1.4vw;">New Username</p>
-					<input style = "width: 18.8vw; height: 1.9vw; margin: 1vw 2vw 0vw 3.7vw; font-size: 1.2vw;" type = "text" name = "NewUserName" placeholder="Your New Username..."/>
+					<input style = "width: 18.8vw; height: 1.9vw; margin: 3.05vw 0vw 0vw 4.2vw;" type = "text" name = "NewUserName" placeholder="New Username..."/>
 
-					<input style = "width: 19.2vw; height: 2.5vw; margin: 2.8vw 2vw 0vw 3.7vw; font-size: 1.2vw;" type = "submit" name = "submit" value = "Update Username"/>
-				
+					<p style = "margin: 1.4vw 0vw -1.2vw 5.7vw; font-size: 1vw; visibility: hidden;">Show Password</p>
+						
+					<!-- Checkbox for password visibility -->
+					<input type="checkbox" style = "visibility: hidden;" onclick="myFunction()"/>
+						
+					<input style = "width: 19.6vw; height: 2.5vw; margin: 4.4vw 0vw 0vw 4.2vw;" type = "submit" value = "Update Username"/>
+					
 				</form></h3>
-
-				<center><p style = "margin: -5.8vw 0vw 0vw 0vw; font-size: 1vw; visibility: hidden;">Return Back To<a href = "login.php"> Login</a></p></center>
+					
+				<center><p style = "margin: -6.5vw 0vw 0vw 0vw; font-size: 1vw; visibility: hidden;">Need An Account?<a href = "register.html"> Register</a></p></center>
 
 			</div>
 
