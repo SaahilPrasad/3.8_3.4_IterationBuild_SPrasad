@@ -1,0 +1,243 @@
+/* Style for overall website */
+html{
+  background: white;
+}
+
+/* Style for body */
+body {
+  margin: 0vw;
+}
+
+/* Grid system has been created below */
+.grid-container {
+	display: grid;
+	grid-template-columns: 18vw auto;
+	grid-template-rows: 29vw 8.2vw 64vw 13vw;
+}
+
+/* Style for nav (navigation) */
+.nav1 {
+	background: #000;
+	opacity: ;
+	font-size: 1.35vw;
+	grid-column: 1;
+	grid-row: 1 / span 5;
+	z-index: 1;
+}
+
+/* Style for header, which contains the grid system for the navigation bar */
+.header {
+	background-color: lightblue;
+	grid-column: 2;
+	grid-row: 1;
+	display: grid;
+}
+
+/* Style for space_1, which creates space between contents */
+.space_1 {
+	background: #fff;
+	opacity: ;
+	grid-column: 2;
+	grid-row: 2;
+	z-index: 2;
+}
+
+/* Style for content_1, which contains the grid system for the genre, song and artist covers' classes */
+.content_1 {
+	background: #fff;
+	opacity: ;
+	font-size: 1.1vw;
+	margin: 0vw 13vw 0vw 13vw;
+	grid-column: 2;
+	grid-row: 3;
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: 20.5vw 20.5vw 20.5vw;
+	z-index: 1;
+}
+
+/* Style for content_genre, which contains the grid system to hold the genre covers/ images */
+.content_genre {
+	background: #fff;
+	opacity: ;
+	font-size: 1.1vw;
+	margin: 2vw 0vw 0vw 0vw;
+	grid-column: 1;
+	grid-row: 1;
+	display: grid;
+	grid-template-columns: 0.5fr 2.3vw 0.5fr 2.3vw 0.5fr 2.3vw 0.5fr;
+	grid-template-rows: 11.8vw;
+	z-index: 1;
+}
+
+.genre1 {
+	box-sizing: border-box;
+	border-radius: 10%;
+	border: 0.2vw solid #000;
+	background: #ffb282;
+	opacity: ;
+	grid-column: 1;
+	grid-row: 1;
+	z-index: 1;
+}
+
+.genre2 {
+	box-sizing: border-box;
+	border-radius: 10%;
+	border: 0.2vw solid #000;
+	background: #ffb282;
+	opacity: ;
+	grid-column: 3;
+	grid-row: 1;
+	z-index: 1;
+}
+
+.genre3 {
+	box-sizing: border-box;
+	border-radius: 10%;
+	border: 0.2vw solid #000;
+	background: #ffb282;
+	opacity: ;
+	grid-column: 5;
+	grid-row: 1;
+	z-index: 1;
+}
+
+.genre4 {
+	box-sizing: border-box;
+	border-radius: 10%;
+	border: 0.2vw solid #000;
+	background: #ffb282;
+	opacity: ;
+	grid-column: 7;
+	grid-row: 1;
+	z-index: 1;
+}
+
+/* Style for content_song, which contains the grid system to hold the song covers/ images */
+.content_song {
+	background: #fff;
+	opacity: ;
+	font-size: 1.1vw;
+	margin: 2vw 0vw 0vw 0vw;
+	grid-column: 1;
+	grid-row: 2;
+	display: grid;
+	grid-template-columns: 0.5fr 2.3vw 0.5fr 2.3vw 0.5fr 2.3vw 0.5fr;
+	grid-template-rows: 11.8vw;
+	z-index: 1;
+}
+
+.song1 {
+	box-sizing: border-box;
+	border-radius: 10%;
+	border: 0.2vw solid #000;
+	background: #ffb282;
+	opacity: ;
+	grid-column: 1;
+	grid-row: 1;
+	z-index: 1;
+}
+
+.song2 {
+	box-sizing: border-box;
+	border-radius: 10%;
+	border: 0.2vw solid #000;
+	background: #ffb282;
+	opacity: ;
+	grid-column: 3;
+	grid-row: 1;
+	z-index: 1;
+}
+
+.song3 {
+	box-sizing: border-box;
+	border-radius: 10%;
+	border: 0.2vw solid #000;
+	background: #ffb282;
+	opacity: ;
+	grid-column: 5;
+	grid-row: 1;
+	z-index: 1;
+}
+
+.song4 {
+	box-sizing: border-box;
+	border-radius: 10%;
+	border: 0.2vw solid #000;
+	background: #ffb282;
+	opacity: ;
+	grid-column: 7;
+	grid-row: 1;
+	z-index: 1;
+}
+
+/* Style for content_artist, which contains the grid system to hold the artist covers/ images */
+.content_artist {
+	background: #fff;
+	opacity: ;
+	font-size: 1.1vw;
+	margin: 2vw 0vw 0vw 0vw;
+	grid-column: 1;
+	grid-row: 3;
+	display: grid;
+	grid-template-columns: 0.5fr 2.3vw 0.5fr 2.3vw 0.5fr 2.3vw 0.5fr;
+	grid-template-rows: 11.8vw;
+	z-index: 1;
+}
+
+.artist1 {
+	box-sizing: border-box;
+	border-radius: 10%;
+	border: 0.2vw solid #000;
+	background: #ffb282;
+	opacity: ;
+	grid-column: 1;
+	grid-row: 1;
+	z-index: 1;
+}
+
+.artist2 {
+	box-sizing: border-box;
+	border-radius: 10%;
+	border: 0.2vw solid #000;
+	background: #ffb282;
+	opacity: ;
+	grid-column: 3;
+	grid-row: 1;
+	z-index: 1;
+}
+
+.artist3 {
+	box-sizing: border-box;
+	border-radius: 10%;
+	border: 0.2vw solid #000;
+	background: #ffb282;
+	opacity: ;
+	grid-column: 5;
+	grid-row: 1;
+	z-index: 1;
+}
+
+.artist4 {
+	box-sizing: border-box;
+	border-radius: 10%;
+	border: 0.2vw solid #000;
+	background: #ffb282;
+	opacity: ;
+	grid-column: 7;
+	grid-row: 1;
+	z-index: 1;
+}
+
+/* Style for footer for legal statements */
+.footer{
+	background: #beedab;
+	opacity: ;
+	font-size: 1.1vw;
+	margin: 0vw 0vw 0vw 0vw;
+	grid-column: 2;
+	grid-row: 4;
+	display: grid;
+	z-index: 1;
+}

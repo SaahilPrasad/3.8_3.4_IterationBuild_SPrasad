@@ -1,0 +1,96 @@
+/* Style for overall website */
+html{
+  background: white;
+}
+
+/* Style for body */
+body {
+  margin: 0vw;
+}
+
+/* Grid system has been created below */
+.grid-container {
+	display: grid;
+	grid-template-columns: 18vw auto;
+	grid-template-rows: 29vw 7vw 3vw 50vw 0vw 13vw;
+}
+
+/* Style for nav (navigation) */
+.nav1 {
+	background: #000;
+	opacity: ;
+	font-size: 1.35vw;
+	grid-column: 1;
+	grid-row: 1 / span 6;
+	z-index: 1;
+}
+
+/* Style for header, which contains the grid system for the navigation bar */
+.header {
+	background-color: lightblue;
+	grid-column: 2;
+	grid-row: 1;
+	display: grid;
+}
+
+/* Style for search_content - search system */
+.search_content{
+	background: #ffb282;
+	opacity: ;
+	font-size: 1.1vw;
+	margin: 0vw 5vw 0vw 5vw;
+	grid-column: 2;
+	grid-row: 2;
+	display: grid;
+	z-index: 1;
+}
+
+/* Style for total_duration */
+.total_duration{
+	background: #ccb0f7;
+	opacity: ;
+	font-size: 1.1vw;
+	margin: 0vw 5vw 0vw 5vw;
+	grid-column: 2;
+	grid-row: 3;
+	display: grid;
+	z-index: 1;
+}
+
+/* Style for content_1, which contains the grid system for the query row heading */
+.content_1 {
+	background: white;
+	opacity: ;
+	font-size: 1.1vw;
+	margin: 0vw 0vw 0vw 0vw;
+	grid-column: 2;
+	grid-row: 4;
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: 3vw;
+	position: relative;
+}
+
+/* Style for space_1, which creates space between contents */
+.space_1{
+	background: black;
+	opacity: ;
+	font-size: 1.1vw;
+	margin: 0vw 0vw 0vw 0vw;
+	grid-column: 2;
+	grid-row: 5;
+	display: grid;
+	z-index: 1;
+}
+
+/* Style for footer for legal statements */
+.footer{
+	background: #beedab;
+	opacity: ;
+	font-size: 1.1vw;
+	margin: 0vw 0vw 0vw 0vw;
+	grid-column: 2;
+	grid-row: 6;
+	display: grid;
+	z-index: 1;
+}

@@ -1,0 +1,71 @@
+/* Style for overall website */
+html{
+  background: black;
+}
+
+/* Style for body */
+body {
+  margin: 0vw;
+  height: 100%; 
+  overflow: hidden;
+}
+
+/* Grid system has been created below */
+.grid-container {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: 4.25vw 48.3vw;
+	height: 100vh;
+}
+
+/* Style for nav (navigation) */
+.nav {
+	box-sizing: border-box;
+	background: #000;
+	opacity: ;
+	grid-column: 1 / span 2;
+	grid-row: 1;
+	z-index: 1;
+}
+
+/* Style for content_1, which contains the grid system for the login box and header */
+.content_1 {
+	background: lightblue;
+	opacity: ;
+	font-size: 1.1vw;
+	margin: 0vw 0vw 0vw 0vw;
+	grid-column: 1 / span 2;
+	grid-row: 2;
+	display: grid;
+	grid-template-columns: 36vw 27.5vw 36vw;
+	grid-template-rows: auto;
+	z-index: 1;
+}
+
+/* Style for login box */
+.login_box {
+	background: #ccb0f7;
+	box-sizing: border-box;
+	border-radius: 5%;
+	position: relative;
+	grid-column: 2;
+	grid-row: 1;
+	display: grid;
+}
+
+/* Style for checkbox input */
+input[type=checkbox] {
+	margin: 0.1vw 0vw 0vw 3.8vw;
+	width: 1vw;
+	height: 1vw;
+}
+
+/* Style for links */
+a {
+	text-decoration: none;
+	color: ;
+}
+
+.login_box a:hover {
+	text-decoration: underline;
+}
